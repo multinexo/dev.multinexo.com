@@ -1,16 +1,144 @@
----
-title: Blog
-layout: default
-sectionid: blog
----
+<!DOCTYPE html>
+<html>
 
-<div class="container">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-29898815-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-29898815-5');
+    </script>
+
+    <title>Blog</title>
+    <meta name="description" content="Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!
+">
+
+
+    <!-- Material Design -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="//code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Blog | Multinexo Developers</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Blog" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!" />
+<meta property="og:description" content="Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!" />
+<link rel="canonical" href="https://dev.multinexo.com/allposts.html" />
+<meta property="og:url" content="https://dev.multinexo.com/allposts.html" />
+<meta property="og:site_name" content="Multinexo Developers" />
+<script type="application/ld+json">
+{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"WebPage","headline":"Blog","url":"https://dev.multinexo.com/allposts.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="https://dev.multinexo.com/allposts.html">
+    <link rel="alternate" type="application/rss+xml" title="Multinexo Developers" href="https://dev.multinexo.com/feed.xml" />
+</head>
+
+
+<body class="mdl-demo">
+    <div class="mdl-layout mdl-js-layout  mdl-layout--fixed-header">
+        <header class="mdl-layout__header layout-row layout-align-space-between-center mdl-color--white mdl-color-text--grey-700">
+    <div class="mdl-layout__header-row flex">
+        <div class="logo-header">
+            <a href="/"><img src="https://dev.multinexo.com/img/multinexo_logotype_colored.svg" alt=""></a>
+        </div>
+        <nav class="mdl-navigation mdl-layout--large-screen-only links">
+          <a href="/">Home</a>
+          <a href="/docs/0.0.23/resources/products/">API</a>
+          <a href="/styleguide/intro">Guía de estilo</a>
+          <!--  descomentar cuando esté listo el blog -->
+          <!--<a href="/2017/05/03/jekyll-doc-theme.html">Blog</a>-->
+        </nav>
+        <div class="mdl-layout-spacer"></div>
+    </div>
+    <div class="mdl-layout__header-row flex">
+      <nav class="mdl-navigation mdl-layout--large-screen-only flex layout-row layout-align-end">
+        <form id="search-form">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable width-100">
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-box" Placeholder="Buscar...">
+            </div>
+            <label id="search-label" class="mdl-button mdl-js-button mdl-button--icon mdl-color--white .mdl-color-text--grey-700" for="search-box">
+              <i class="material-icons .mdl-color-text--grey-700">search</i>
+            </label>
+          </div>
+        </form>
+      </nav>
+    </div>
+</header>
+<div class="mdl-layout__drawer mobile_drawer">
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="">Home</a>
+    <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">API</a>
+    <a class="mdl-navigation__link" href="/styleguide/intro">Guía de estilo</a>
+    <form class="mdl-navigation__link" id="search-form">
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input search-box-mobile" type="text" Placeholder="Buscar...">
+      </div>
+    </form>
+  </nav>
+</div>
+
+
+        
+        
+
+        <main class="mdl-layout__content">
+        <div class="container">
     <div class="inner-content">
-        <h1>Todos los artículos</h1> {% for page in site.posts %}
+        <h1>Todos los artículos</h1> 
         <p>
-            <strong><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></strong>
-            <span>el {{ page.date | date: "%B %e, %Y" }} {% if page.author %} por {{ page.author }}{% endif %}</span>
+            <strong><a href="/2017/05/03/jekyll-doc-theme.html">Jekyll Doc Theme is published!</a></strong>
+            <span>el May  3, 2017  por aksakalli</span>
         </p>
-        {% endfor %}
+        
+        <p>
+            <strong><a href="/2017/02/01/welcome-to-jekyll.html">Welcome to Jekyll!</a></strong>
+            <span>el February  1, 2017  por Jekyll</span>
+        </p>
+        
     </div>
 </div>
+
+
+        <footer class="footer">
+    <div class="container">
+        <p class="text-center">
+            Multinexo 2019 |
+            Powered by <a href="https://multinexo.com/">Multinexo</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+        </main>
+    </div>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+
+</body>
+
+</html>
