@@ -426,45 +426,46 @@ div a.mdl-button {
 
 /* Modifica los estilos de los inputs */
 
-div .mdl-textfield__label:after {
-  background: white;
-}
-
-div.mdl-textfield {
-  color: white
-}
-
-div.mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-  color: white
-}
-
-div.mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
-  color: rgba(100%, 100%, 100%, .5)
-}
-
-.mdl-textfield__input {
-  border-bottom: 1px solid rgba(100%, 100%, 100%, .12)
-}
-
-.mdl-textfield__label {
-  color: rgba(100%, 100%, 100%, .5);
-}
-
-span.mdl-textfield__error {
-  color: #ffca00
-}
-
-.mdl-textfield.is-invalid .mdl-textfield__input {
-  border-color: #ffca00;
-}
-
-.mdl-textfield--floating-label.is-invalid .mdl-textfield__label {
-  color: #ffca00;
-}
-
-.mdl-textfield.is-invalid .mdl-textfield__label:after {
-  background: #ffca00;
-}
+// @todo FE-159 share-multinexo parent and apply this styles only in contact form
+// div .mdl-textfield__label:after {
+//   background: white;
+// }
+//
+// div.mdl-textfield {
+//   color: white
+// }
+//
+// div.mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+//   color: white
+// }
+//
+// div.mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+//   color: rgba(100%, 100%, 100%, .5)
+// }
+//
+// .mdl-textfield__input {
+//   border-bottom: 1px solid rgba(100%, 100%, 100%, .12)
+// }
+//
+// .mdl-textfield__label {
+//   color: rgba(100%, 100%, 100%, .5);
+// }
+//
+// span.mdl-textfield__error {
+//   color: #ffca00
+// }
+//
+// .mdl-textfield.is-invalid .mdl-textfield__input {
+//   border-color: #ffca00;
+// }
+//
+// .mdl-textfield--floating-label.is-invalid .mdl-textfield__label {
+//   color: #ffca00;
+// }
+//
+// .mdl-textfield.is-invalid .mdl-textfield__label:after {
+//   background: #ffca00;
+// }
 
 
 /* Establece un ancho del 100% */

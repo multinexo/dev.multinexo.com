@@ -28,3 +28,9 @@ $('#search-label').click(function(){
 });
 
 implementTypeahead($('.search-box-mobile'));
+
+function selectVersion(version) {
+    let url = window.location.href;
+    new_url = url.replace(/\d+\.\d+\.\d+/, version);
+    window.location.href = new_url;
+}

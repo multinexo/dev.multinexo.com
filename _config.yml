@@ -1,5 +1,6 @@
 # Site settings
 title: Multinexo Developers
+version: 0.0.23
 email: info@multinexo.com
 description: >
   Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y
@@ -55,7 +56,7 @@ defaults:
 
 collections:
   docs:
-  #   permalink: /:collection/:path/
+    # permalink: /:collection/:path/
     output: true
 
   styleguide:

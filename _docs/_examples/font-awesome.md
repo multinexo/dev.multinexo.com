@@ -1,6 +1,6 @@
 ---
 title: Font Awesome Icon List
-permalink: /docs/font-awesome/
+permalink: /docs/0.0.23/font-awesome/
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: Bootstrap Features
-permalink: /docs/bootstrap/
+permalink: /docs/0.0.23/bootstrap/
 ---
 
 
