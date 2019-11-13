@@ -1,1 +1,1 @@
-Sitemap: http://multinexo.github.io/dev.multinexo.com//sitemap.xml
+Sitemap: https://dev.multinexo.com/sitemap.xml
