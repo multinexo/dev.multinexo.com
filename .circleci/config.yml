@@ -21,7 +21,7 @@ jobs:
           command: bundle install
       - run:
           name: Publish to Github Pages
-          command: bundle exec jgd
+          command: bundle exec jgd -r v2.0
 workflows:
   version: 2
   build:
