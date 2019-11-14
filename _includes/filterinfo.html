@@ -1,0 +1,13 @@
+{% if page.section == "Filtros" %}
+    <p>{{ page.description }}</p>
+    <p><strong>Tipo</strong>: <code>{{ page.filter_type }}</code></p>
+    {% if page.filter_modifiers %}
+        <p><strong>Modificadores</strong>:</p>
+        <ul>
+            {% for modifier in page.filter_modifiers %}
+            <li><code>{{ modifier }}</code></li>
+            {% endfor %}
+        </ul>
+        <p><strong>Modificador por defecto</strong>: <code>{{ page.default_modifier }}</code></p>
+    {% endif %}
+{% endif %}
