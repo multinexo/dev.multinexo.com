@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: bundle install
+      - run:
+          name: Build peroject
+          command: bundle exec jekyll build
+  deploy-to-ghpages:
+    docker:
+      - image: circleci/ruby:2.5.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: bundle install
+      - run:
+          name: Publish to Github Pages
+          command: bundle exec jgd -r v2.0
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: v2.0
+  deploy:
+    jobs:
+      - deploy-to-ghpages:
+          filters:
+            branches:
+              only: v2.0

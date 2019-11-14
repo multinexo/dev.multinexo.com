@@ -8,10 +8,11 @@ gem "jekyll", "3.6.2"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem "jekyll-feed"
-   gem "jekyll-sitemap"
-   gem "jekyll-redirect-from", "~> 0.11.0"
-   gem "jekyll-seo-tag"
+    gem "jekyll-feed"
+    gem "jekyll-sitemap"
+    gem "jekyll-redirect-from", "~> 0.11.0"
+    gem "jekyll-seo-tag"
+    gem "jgd"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

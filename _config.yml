@@ -7,9 +7,9 @@ description: >
   medianas empresas. Impresora fiscal, factura electrónica, stock,
   cuentas corrientes, multiusuario, ¡y más!
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: https://dev.multinexo.com # the base hostname & protocol for your site
-git_address: https://github.com/multinexo
-git_edit_address: https://github.com/multinexo/docs/blob/gh-pages
+url: https://dev.multienxo.com # the base hostname & protocol for your site
+git_address: https://github.com/dev.multinexo.com
+git_edit_address: https://github.com/multinexo/dev.multinexo.com/
 
 # Build settings
 markdown: kramdown
