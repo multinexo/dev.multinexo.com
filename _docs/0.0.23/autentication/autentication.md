@@ -5,7 +5,7 @@ permalink: /docs/0.0.23/autentication/
 section: Autenticación
 ---
 
-Multinexo sigue la especificación Oauth 2.0 para identificar y autorizar a los usuarios cuando utilizan los servicios 
+Multinexo sigue la especificación <a href="https://oauth.net/2/" target="\_blank">OAuth 2.0</a> para identificar y autorizar a los usuarios cuando utilizan los servicios 
 ofrecidos por la API.Si no conoces la especificación puedes visitar la 
 <a href="https://tools.ietf.org/html/rfc6749" target="\_blank">RFC</a> para más información.
 
