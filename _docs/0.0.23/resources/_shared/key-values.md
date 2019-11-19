@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: key_values
 permalink: /docs/0.0.23/resources/key_values/
+version: 0.0.23
 singular: resource
 section: Shared
 partOf: company

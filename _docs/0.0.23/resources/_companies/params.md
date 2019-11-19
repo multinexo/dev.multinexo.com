@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: params
 permalink: /docs/0.0.23/resources/params/
+version: 0.0.23
 singular: resource
 section: Companies
 partOf: company

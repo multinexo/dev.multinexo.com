@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: futureprices
 permalink: /docs/0.0.23/resources/futureprices/
+version: 0.0.23
 singular: resource
 section: Products
 partOf: company

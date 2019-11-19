@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: costs
 permalink: /docs/0.0.23/resources/costs/
+version: 0.0.23
 singular: resource
 section: Funds
 partOf: company

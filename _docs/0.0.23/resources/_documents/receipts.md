@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: receipts
 permalink: /docs/0.0.23/resources/receipts/
+version: 0.0.23
 singular: resource
 section: Documents
 partOf: guest

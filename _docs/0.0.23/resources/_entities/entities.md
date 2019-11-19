@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: entities
 permalink: /docs/0.0.23/resources/entities/
+version: 0.0.23
 singular: resource
 section: Entities
 partOf: company
@@ -114,6 +114,14 @@ relationships:
   -
     resource: documents
     alias: documents
+    crud: 'create, read, update'
+  -
+    resource: orders
+    alias: orders
+    crud: 'create, read, update'
+  -
+    resource: invoices
+    alias: invoices
     crud: 'create, read, update'
   -
     resource: responsibility

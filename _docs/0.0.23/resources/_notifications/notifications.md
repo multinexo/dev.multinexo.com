@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: notifications
 permalink: /docs/0.0.23/resources/notifications/
+version: 0.0.23
 singular: resource
 section: Notifications
 partOf: user

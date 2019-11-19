@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: physicalpos
 permalink: /docs/0.0.23/resources/physicalpos/
+version: 0.0.23
 singular: resource
 section: Cashier
 partOf: company

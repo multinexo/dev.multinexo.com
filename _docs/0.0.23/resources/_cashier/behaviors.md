@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: behaviors
 permalink: /docs/0.0.23/resources/behaviors/
+version: 0.0.23
 singular: resource
 section: Cashier
 partOf: guest

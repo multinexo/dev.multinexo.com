@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: fiscalbooks
 permalink: /docs/0.0.23/resources/fiscalbooks/
+version: 0.0.23
 singular: resource
 section: Fiscal
 partOf: company

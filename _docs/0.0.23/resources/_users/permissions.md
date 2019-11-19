@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: permissions
 permalink: /docs/0.0.23/resources/permissions/
+version: 0.0.23
 singular: resource
 section: Users
 partOf: guest

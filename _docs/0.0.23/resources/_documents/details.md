@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: details
 permalink: /docs/0.0.23/resources/details/
+version: 0.0.23
 singular: resource
 section: Documents
 partOf: company

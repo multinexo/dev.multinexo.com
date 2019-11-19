@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: messages
 permalink: /docs/0.0.23/resources/messages/
+version: 0.0.23
 singular: resource
 section: Shared
 partOf: company

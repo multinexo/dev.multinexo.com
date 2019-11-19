@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: meli_categories
 permalink: /docs/0.0.23/resources/meli_categories/
+version: 0.0.23
 singular: resource
 section: Products
 partOf: guest

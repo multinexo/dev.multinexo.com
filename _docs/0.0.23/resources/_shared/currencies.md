@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: currencies
 permalink: /docs/0.0.23/resources/currencies/
+version: 0.0.23
 singular: resource
 section: Shared
 partOf: company

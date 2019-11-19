@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: pricelists
 permalink: /docs/0.0.23/resources/pricelists/
+version: 0.0.23
 singular: resource
 section: Products
 partOf: company

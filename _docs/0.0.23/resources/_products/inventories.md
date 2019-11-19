@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: inventories
 permalink: /docs/0.0.23/resources/inventories/
+version: 0.0.23
 singular: resource
 section: Products
 partOf: company

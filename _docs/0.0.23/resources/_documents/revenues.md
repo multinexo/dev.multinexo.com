@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: revenues
 permalink: /docs/0.0.23/resources/revenues/
+version: 0.0.23
 singular: resource
 section: Documents
 partOf: company

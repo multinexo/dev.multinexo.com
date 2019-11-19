@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: company_users
 permalink: /docs/0.0.23/resources/company_users/
+version: 0.0.23
 singular: resource
 section: Users
 partOf: company

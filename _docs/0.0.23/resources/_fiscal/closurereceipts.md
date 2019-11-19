@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: closurereceipts
 permalink: /docs/0.0.23/resources/closurereceipts/
+version: 0.0.23
 singular: resource
 section: Fiscal
 partOf: company

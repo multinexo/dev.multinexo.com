@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: quotations
 permalink: /docs/0.0.23/resources/quotations/
+version: 0.0.23
 singular: resource
 section: Documents
 partOf: company

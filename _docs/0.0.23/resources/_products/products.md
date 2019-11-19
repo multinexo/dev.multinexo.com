@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: products
 permalink: /docs/0.0.23/resources/products/
+version: 0.0.23
 singular: resource
 section: Products
 partOf: company
@@ -67,7 +67,7 @@ attributes:
       - 'max:999999'
   -
     name: stock
-    crud: 'create, read, update'
+    crud: 'create, read'
     value_type: numeric
   -
     name: stock_alert

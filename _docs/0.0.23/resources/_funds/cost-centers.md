@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: cost_centers
 permalink: /docs/0.0.23/resources/cost_centers/
+version: 0.0.23
 singular: resource
 section: Funds
 partOf: company

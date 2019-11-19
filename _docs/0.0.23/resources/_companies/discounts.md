@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: discounts
 permalink: /docs/0.0.23/resources/discounts/
+version: 0.0.23
 singular: resource
 section: Companies
 partOf: guest

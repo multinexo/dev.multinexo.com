@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: no_fiscal_documents
 permalink: /docs/0.0.23/resources/no_fiscal_documents/
+version: 0.0.23
 singular: resource
 section: Documents
 partOf: company

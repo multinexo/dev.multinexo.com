@@ -1,7 +1,7 @@
 ---
-version: 0.0.23
 resource: permission_groups
 permalink: /docs/0.0.23/resources/permission_groups/
+version: 0.0.23
 singular: resource
 section: Users
 partOf: guest
