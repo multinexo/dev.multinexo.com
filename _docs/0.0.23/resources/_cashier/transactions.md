@@ -1,7 +1,7 @@
 ---
 resource: transactions
-version: 0.0.23
 permalink: /docs/0.0.23/resources/transactions/
+version: 0.0.23
 singular: resource
 section: Cashier
 partOf: company

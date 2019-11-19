@@ -1,7 +1,7 @@
 ---
 resource: responsibilities
-version: 0.0.23
 permalink: /docs/0.0.23/resources/responsibilities/
+version: 0.0.23
 singular: resource
 section: Entities
 partOf: guest

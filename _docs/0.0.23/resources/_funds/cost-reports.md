@@ -1,7 +1,7 @@
 ---
 resource: cost_reports
-version: 0.0.23
 permalink: /docs/0.0.23/resources/cost_reports/
+version: 0.0.23
 singular: resource
 section: Funds
 partOf: company

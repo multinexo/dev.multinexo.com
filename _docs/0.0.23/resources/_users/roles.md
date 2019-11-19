@@ -1,7 +1,7 @@
 ---
 resource: roles
-version: 0.0.23
 permalink: /docs/0.0.23/resources/roles/
+version: 0.0.23
 singular: resource
 section: Users
 partOf: company

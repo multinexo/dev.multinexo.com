@@ -1,7 +1,7 @@
 ---
 resource: cashier_balances
-version: 0.0.23
 permalink: /docs/0.0.23/resources/cashier_balances/
+version: 0.0.23
 singular: resource
 section: Cashier
 partOf: company

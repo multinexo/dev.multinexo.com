@@ -1,7 +1,7 @@
 ---
 resource: measures
-version: 0.0.23
 permalink: /docs/0.0.23/resources/measures/
+version: 0.0.23
 singular: resource
 section: Products
 partOf: guest

@@ -1,7 +1,7 @@
 ---
 resource: external_apps
-version: 0.0.23
 permalink: /docs/0.0.23/resources/external_apps/
+version: 0.0.23
 singular: resource
 section: ExternalApps
 partOf: guest

@@ -1,7 +1,7 @@
 ---
 resource: categories
-version: 0.0.23
 permalink: /docs/0.0.23/resources/categories/
+version: 0.0.23
 singular: resource
 section: Products
 partOf: company

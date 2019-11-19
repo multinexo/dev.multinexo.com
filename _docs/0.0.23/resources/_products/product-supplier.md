@@ -1,7 +1,7 @@
 ---
 resource: product_supplier
-version: 0.0.23
 permalink: /docs/0.0.23/resources/product_supplier/
+version: 0.0.23
 singular: resource
 section: Products
 partOf: company
