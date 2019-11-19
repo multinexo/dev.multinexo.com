@@ -1,7 +1,7 @@
 ---
 resource: orders
-permalink: /docs/0.0.23/resources/orders/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/orders/
 singular: resource
 section: Documents
 partOf: company

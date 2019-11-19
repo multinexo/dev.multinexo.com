@@ -1,7 +1,7 @@
 ---
 resource: measures
-permalink: /docs/0.0.23/resources/measures/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/measures/
 singular: resource
 section: Products
 partOf: guest

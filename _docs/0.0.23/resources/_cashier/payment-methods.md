@@ -1,7 +1,7 @@
 ---
 resource: payment_methods
-permalink: /docs/0.0.23/resources/payment_methods/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/payment_methods/
 singular: resource
 section: Cashier
 partOf: company

@@ -1,7 +1,7 @@
 ---
 resource: receipts
-permalink: /docs/0.0.23/resources/receipts/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/receipts/
 singular: resource
 section: Documents
 partOf: guest

@@ -1,7 +1,7 @@
 ---
 resource: physicalpos
-permalink: /docs/0.0.23/resources/physicalpos/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/physicalpos/
 singular: resource
 section: Cashier
 partOf: company

@@ -1,7 +1,7 @@
 ---
 resource: discounts
-permalink: /docs/0.0.23/resources/discounts/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/discounts/
 singular: resource
 section: Companies
 partOf: guest

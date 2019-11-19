@@ -1,7 +1,7 @@
 ---
 resource: company_external_apps
-permalink: /docs/0.0.23/resources/company_external_apps/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/company_external_apps/
 singular: resource
 section: ExternalApps
 partOf: company

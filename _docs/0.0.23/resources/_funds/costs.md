@@ -1,7 +1,7 @@
 ---
 resource: costs
-permalink: /docs/0.0.23/resources/costs/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/costs/
 singular: resource
 section: Funds
 partOf: company

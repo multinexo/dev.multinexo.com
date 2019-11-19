@@ -1,7 +1,7 @@
 ---
 resource: currencies
-permalink: /docs/0.0.23/resources/currencies/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/currencies/
 singular: resource
 section: Shared
 partOf: company

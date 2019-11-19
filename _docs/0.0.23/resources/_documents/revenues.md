@@ -1,7 +1,7 @@
 ---
 resource: revenues
-permalink: /docs/0.0.23/resources/revenues/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/revenues/
 singular: resource
 section: Documents
 partOf: company

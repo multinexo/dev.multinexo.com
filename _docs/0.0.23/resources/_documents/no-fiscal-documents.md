@@ -1,7 +1,7 @@
 ---
 resource: no_fiscal_documents
-permalink: /docs/0.0.23/resources/no_fiscal_documents/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/no_fiscal_documents/
 singular: resource
 section: Documents
 partOf: company

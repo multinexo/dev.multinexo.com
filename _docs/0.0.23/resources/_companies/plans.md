@@ -1,7 +1,7 @@
 ---
 resource: plans
-permalink: /docs/0.0.23/resources/plans/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/plans/
 singular: resource
 section: Companies
 partOf: guest

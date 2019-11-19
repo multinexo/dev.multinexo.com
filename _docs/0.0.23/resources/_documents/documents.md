@@ -1,7 +1,7 @@
 ---
 resource: documents
-permalink: /docs/0.0.23/resources/documents/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/documents/
 singular: resource
 section: Documents
 partOf: company

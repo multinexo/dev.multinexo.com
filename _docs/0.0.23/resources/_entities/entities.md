@@ -1,7 +1,7 @@
 ---
 resource: entities
-permalink: /docs/0.0.23/resources/entities/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/entities/
 singular: resource
 section: Entities
 partOf: company

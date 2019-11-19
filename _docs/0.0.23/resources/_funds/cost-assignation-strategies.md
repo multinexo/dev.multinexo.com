@@ -1,7 +1,7 @@
 ---
 resource: cost_assignation_strategies
-permalink: /docs/0.0.23/resources/cost_assignation_strategies/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/cost_assignation_strategies/
 singular: resource
 section: Funds
 partOf: company

@@ -1,7 +1,7 @@
 ---
 resource: notifications
-permalink: /docs/0.0.23/resources/notifications/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/notifications/
 singular: resource
 section: Notifications
 partOf: user

@@ -1,7 +1,7 @@
 ---
 resource: preferences
-permalink: /docs/0.0.23/resources/preferences/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/preferences/
 singular: resource
 section: Users
 partOf: user

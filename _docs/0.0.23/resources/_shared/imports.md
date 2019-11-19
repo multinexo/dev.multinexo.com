@@ -1,7 +1,7 @@
 ---
 resource: imports
-permalink: /docs/0.0.23/resources/imports/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/imports/
 singular: resource
 section: Shared
 partOf: company

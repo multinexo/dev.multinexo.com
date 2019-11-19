@@ -1,7 +1,7 @@
 ---
 resource: cashier_entries
-permalink: /docs/0.0.23/resources/cashier_entries/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/cashier_entries/
 singular: resource
 section: Cashier
 partOf: company

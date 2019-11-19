@@ -1,7 +1,7 @@
 ---
 resource: behaviors
-permalink: /docs/0.0.23/resources/behaviors/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/behaviors/
 singular: resource
 section: Cashier
 partOf: guest

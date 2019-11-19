@@ -1,7 +1,7 @@
 ---
 resource: categories
-permalink: /docs/0.0.23/resources/categories/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/categories/
 singular: resource
 section: Products
 partOf: company

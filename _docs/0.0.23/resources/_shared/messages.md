@@ -1,7 +1,7 @@
 ---
 resource: messages
-permalink: /docs/0.0.23/resources/messages/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/messages/
 singular: resource
 section: Shared
 partOf: company

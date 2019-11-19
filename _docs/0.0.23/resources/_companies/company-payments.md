@@ -1,7 +1,7 @@
 ---
 resource: company_payments
-permalink: /docs/0.0.23/resources/company_payments/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/company_payments/
 singular: resource
 section: Companies
 partOf: company

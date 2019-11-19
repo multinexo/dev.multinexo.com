@@ -1,7 +1,7 @@
 ---
 resource: invoices
-permalink: /docs/0.0.23/resources/invoices/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/invoices/
 singular: resource
 section: Documents
 partOf: company

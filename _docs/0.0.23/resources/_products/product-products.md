@@ -1,7 +1,7 @@
 ---
 resource: product_products
-permalink: /docs/0.0.23/resources/product_products/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/product_products/
 singular: resource
 section: Products
 partOf: company

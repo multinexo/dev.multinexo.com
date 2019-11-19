@@ -1,7 +1,7 @@
 ---
 resource: options
-permalink: /docs/0.0.23/resources/options/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/options/
 singular: resource
 section: Companies
 partOf: guest

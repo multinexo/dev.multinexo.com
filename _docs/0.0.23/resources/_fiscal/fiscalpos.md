@@ -1,7 +1,7 @@
 ---
 resource: fiscalpos
-permalink: /docs/0.0.23/resources/fiscalpos/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/fiscalpos/
 singular: resource
 section: Fiscal
 partOf: company

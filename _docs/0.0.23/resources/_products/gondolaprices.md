@@ -1,7 +1,7 @@
 ---
 resource: gondolaprices
-permalink: /docs/0.0.23/resources/gondolaprices/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/gondolaprices/
 singular: resource
 section: Products
 partOf: company

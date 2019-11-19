@@ -1,7 +1,7 @@
 ---
 resource: pricelists
-permalink: /docs/0.0.23/resources/pricelists/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/pricelists/
 singular: resource
 section: Products
 partOf: company

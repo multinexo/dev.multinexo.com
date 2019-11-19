@@ -1,7 +1,7 @@
 ---
 resource: companies
-permalink: /docs/0.0.23/resources/companies/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/companies/
 singular: resource
 section: Companies
 partOf: user

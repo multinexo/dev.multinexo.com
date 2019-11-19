@@ -1,7 +1,7 @@
 ---
 resource: permission_groups
-permalink: /docs/0.0.23/resources/permission_groups/
 version: 0.0.23
+permalink: /docs/0.0.23/resources/permission_groups/
 singular: resource
 section: Users
 partOf: guest
