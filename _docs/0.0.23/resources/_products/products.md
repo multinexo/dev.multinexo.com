@@ -86,6 +86,9 @@ attributes:
     name: cost_with_tax
     crud: 'create, read, update'
   -
+    name: photo_url
+    crud: read
+  -
     name: category_id
     crud: ''
     filter: EnumFilter

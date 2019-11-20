@@ -65,7 +65,7 @@ attributes:
     crud: 'create, read, update'
   -
     name: logo_url
-    crud: 'create, read, update'
+    crud: read
   -
     name: street_name
     crud: 'create, read, update'
