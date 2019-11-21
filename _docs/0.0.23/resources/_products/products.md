@@ -43,12 +43,16 @@ attributes:
   -
     name: conduct
     crud: 'create, read, update'
+    filter: EnumFilter
     value_type: 'in [variant_parent, variant_common, compound, common]'
     required: true
   -
     name: product_type
     crud: 'create, read, update'
     filter: EnumFilter
+    rules:
+      - 'max:96'
+    value_type: 'in [service, product]'
   -
     name: duration
     crud: 'create, read, update'
@@ -58,7 +62,6 @@ attributes:
     crud: 'create, read, update'
     filter: EnumFilter
     value_type: 'in [disabled, negative, positive]'
-    required: true
   -
     name: replacement_cost
     crud: 'create, read, update'
