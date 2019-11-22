@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-29898815-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-29898815-5');
+    </script>
+
+    <title>Aplicaciones de servidor web</title>
+    <meta name="description" content="La secuencia de autorización comienza cuando su aplicación redirige un navegador a una URL de Multinexo; la URL incluye parámetros de consulta que indican el...">
+
+
+    <!-- Material Design -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="//code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Aplicaciones de servidor web | Multinexo Developers</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Aplicaciones de servidor web" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="La secuencia de autorización comienza cuando su aplicación redirige un navegador a una URL de Multinexo; la URL incluye parámetros de consulta que indican el tipo de acceso que se solicita. Multinexo maneja la autenticación del usuario y el consentimiento del usuario. El resultado es un código de autorización, que la aplicación puede intercambiar por un token de acceso y un token de actualización." />
+<meta property="og:description" content="La secuencia de autorización comienza cuando su aplicación redirige un navegador a una URL de Multinexo; la URL incluye parámetros de consulta que indican el tipo de acceso que se solicita. Multinexo maneja la autenticación del usuario y el consentimiento del usuario. El resultado es un código de autorización, que la aplicación puede intercambiar por un token de acceso y un token de actualización." />
+<link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/web_servers/" />
+<meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/web_servers/" />
+<meta property="og:site_name" content="Multinexo Developers" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-22T17:47:54+00:00" />
+<script type="application/ld+json">
+{"description":"La secuencia de autorización comienza cuando su aplicación redirige un navegador a una URL de Multinexo; la URL incluye parámetros de consulta que indican el tipo de acceso que se solicita. Multinexo maneja la autenticación del usuario y el consentimiento del usuario. El resultado es un código de autorización, que la aplicación puede intercambiar por un token de acceso y un token de actualización.","@type":"BlogPosting","headline":"Aplicaciones de servidor web","dateModified":"2019-11-22T17:47:54+00:00","datePublished":"2019-11-22T17:47:54+00:00","url":"https://dev.multinexo.com/docs/0.0.23/web_servers/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/web_servers/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/web_servers/">
+    <link rel="alternate" type="application/rss+xml" title="Multinexo Developers" href="https://dev.multinexo.com/feed.xml" />
+</head>
+
+
+<body class="mdl-demo">
+    <div class="mdl-layout mdl-js-layout  mdl-layout--fixed-drawer  mdl-layout--fixed-header">
+        <header class="mdl-layout__header layout-row layout-align-space-between-center mdl-color--white mdl-color-text--grey-700">
+    <div class="mdl-layout__header-row flex">
+        <div class="logo-header">
+            <a href="/"><img src="https://dev.multinexo.com/img/multinexo_logotype_colored.svg" alt=""></a>
+        </div>
+        <nav class="mdl-navigation mdl-layout--large-screen-only links">
+          <a href="/">Home</a>
+          <a href="/docs/0.0.23/resources/products/">API</a>
+          <a href="/styleguide/intro">Guía de estilo</a>
+          <!--  descomentar cuando esté listo el blog -->
+          <!--<a href="/2017/05/03/jekyll-doc-theme.html">Blog</a>-->
+        </nav>
+        <div class="mdl-layout-spacer"></div>
+    </div>
+    <div class="mdl-layout__header-row flex">
+      <nav class="mdl-navigation mdl-layout--large-screen-only flex layout-row layout-align-end">
+        <form id="search-form">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable width-100">
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-box" Placeholder="Buscar...">
+            </div>
+            <label id="search-label" class="mdl-button mdl-js-button mdl-button--icon mdl-color--white .mdl-color-text--grey-700" for="search-box">
+              <i class="material-icons .mdl-color-text--grey-700">search</i>
+            </label>
+          </div>
+        </form>
+      </nav>
+    </div>
+</header>
+<div class="mdl-layout__drawer mobile_drawer">
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="">Home</a>
+    <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">API</a>
+    <a class="mdl-navigation__link" href="/styleguide/intro">Guía de estilo</a>
+    <form class="mdl-navigation__link" id="search-form">
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input search-box-mobile" type="text" Placeholder="Buscar...">
+      </div>
+    </form>
+  </nav>
+</div>
+
+
+        
+          <div class="mdl-layout__drawer">
+  
+
+  <nav class="mdl-navigation">
+    <div class="mdl-navigation__link ">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <select class="mdl-textfield__input cursor-pointer" name="version" onchange="selectVersion(this.value)">
+          
+            <!-- @todo remove if when we drop non-version links compatibility (for old URLs) -->
+            
+              <option value="0.0.23" selected>0.0.23</option>
+            
+          
+            <!-- @todo remove if when we drop non-version links compatibility (for old URLs) -->
+            
+          
+        </select>
+        <label class="mdl-textfield__label" for="version">Versión</label>
+      </div>
+    </div>
+  </nav>
+
+  
+    
+      
+      
+        <span class="mdl-layout-title">Autenticación</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/autentication/">Autenticación</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Autorización</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/authorization/">Descripción general</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/clients_side_apps/">Aplicaciones del lado del cliente</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/installed_apps/">Aplicaciones instaladas</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/web_servers/">Aplicaciones de servidor web</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Filtros</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/EmissionDateFilter/">Date filter</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/DeletedFilter/">Deleted filter</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/EmissionDateFilter/">Emission date filter</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/EnumFilter/">Enum filter</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/NumberFilter/">Number filter</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/StringFilter/">String filter</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Hardware</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/hardware/lector-de-codigos-de-barra/">Lector de códigos de barra</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Cashier</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/behaviors/">Behaviors</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/cashier_balances/">Cashier Balances</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/cashier_entries/">Cashier Entries</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/payment_methods/">Payment Methods</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/physicalpos/">Physicalpos</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/transactions/">Transactions</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Companies</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/companies/">Companies</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/company_payments/">Company Payments</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/discounts/">Discounts</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/options/">Options</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/params/">Params</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/plans/">Plans</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Documents</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/details/">Details</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/documents/">Documents</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/invoices/">Invoices</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/no_fiscal_documents/">No Fiscal Documents</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/orders/">Orders</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/quotations/">Quotations</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/receipts/">Receipts</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/revenues/">Revenues</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Entities</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/entities/">Entities</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/identifications/">Identifications</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/responsibilities/">Responsibilities</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">ExternalApps</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/company_external_apps/">Company External Apps</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/external_apps/">External Apps</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Fiscal</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/closurereceipts/">Closurereceipts</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/fiscalbooks/">Fiscalbooks</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/fiscalpos/">Fiscalpos</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Funds</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/cost_assignation_percents/">Cost Assignation Percents</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/cost_assignation_strategies/">Cost Assignation Strategies</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/cost_centers/">Cost Centers</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/cost_reports/">Cost Reports</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/costs/">Costs</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Notifications</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/notifications/">Notifications</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Products</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/categories/">Categories</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/futureprices/">Futureprices</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/gondolaprices/">Gondolaprices</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/inventories/">Inventories</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/measures/">Measures</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/meli_categories/">Meli Categories</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/mercadolibre_attributes/">Mercadolibre Attributes</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/pricelist_categories/">Pricelist Categories</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/pricelist_products/">Pricelist Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/pricelist_reports/">Pricelist Reports</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/pricelists/">Pricelists</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/product_products/">Product Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/product_supplier/">Product Supplier</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/publications/">Publications</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/taxes/">Taxes</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Shared</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/currencies/">Currencies</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/imports/">Imports</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/key_values/">Key Values</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/messages/">Messages</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/photos/">Photos</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Users</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/additional_accounts/">Additional Accounts</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/company_users/">Company Users</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permission_groups/">Permission Groups</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permissions/">Permissions</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/preferences/">Preferences</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/roles/">Roles</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/users/">Users</a>
+          
+        </nav>
+      
+    
+  
+    
+      
+      
+        <span class="mdl-layout-title"></span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/autentication/">Autentication</a>
+          
+            <a class="mdl-navigation__link" href="/docs/hardware/lector-de-codigos-de-barra/">Lector De Codigos De Barra</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/behaviors/">Behaviors</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/cashier_balances/">Cashier Balances</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/cashier_entries/">Cashier Entries</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/payment_methods/">Payment Methods</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/physicalpos/">Physicalpos</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/transactions/">Transactions</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/companies/">Companies</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/company_payments/">Company Payments</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/discounts/">Discounts</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/options/">Options</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/params/">Params</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/plans/">Plans</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/details/">Details</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/documents/">Documents</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/invoices/">Invoices</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/no_fiscal_documents/">No Fiscal Documents</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/orders/">Orders</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/quotations/">Quotations</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/receipts/">Receipts</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/revenues/">Revenues</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/entities/">Entities</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/identifications/">Identifications</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/responsibilities/">Responsibilities</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/company_external_apps/">Company External Apps</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/external_apps/">External Apps</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/closurereceipts/">Closurereceipts</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/fiscalbooks/">Fiscalbooks</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/fiscalpos/">Fiscalpos</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/cost_assignation_percents/">Cost Assignation Percents</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/cost_assignation_strategies/">Cost Assignation Strategies</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/cost_centers/">Cost Centers</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/cost_reports/">Cost Reports</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/costs/">Costs</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/notifications/">Notifications</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/categories/">Categories</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/futureprices/">Futureprices</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/gondolaprices/">Gondolaprices</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/inventories/">Inventories</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/measures/">Measures</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/meli_categories/">Meli Categories</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/mercadolibre_attributes/">Mercadolibre Attributes</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/pricelist_categories/">Pricelist Categories</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/pricelist_products/">Pricelist Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/pricelist_reports/">Pricelist Reports</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/pricelists/">Pricelists</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/product_products/">Product Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/product_supplier/">Product Supplier</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/products/">Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/publications/">Publications</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/taxes/">Taxes</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/currencies/">Currencies</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/imports/">Imports</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/key_values/">Key Values</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/messages/">Messages</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/photos/">Photos</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/additional_accounts/">Additional Accounts</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/company_users/">Company Users</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/permission_groups/">Permission Groups</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/permissions/">Permissions</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/preferences/">Preferences</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/roles/">Roles</a>
+          
+            <a class="mdl-navigation__link" href="/docs/resources/users/">Users</a>
+          
+        </nav>
+      
+    
+  
+</div>
+
+        
+        
+
+        <main class="mdl-layout__content">
+              <div class="layout-row layout-align-space-between-start">
+          <div class="layout-row layout-align-center-start mdl-color--grey-50 flex width-100">
+              <div class="flex-50 flex-rs-big-70 flex-sm-100 flex-rs-md-100 flex-md-100" style="margin: 20px 0; padding: 0 20px">
+                
+                  
+                  <h1>Aplicaciones de servidor web</h1>
+                
+                <div id="markdown-content-container"><p>La secuencia de autorización comienza cuando su aplicación redirige un navegador a una URL de Multinexo; la URL incluye 
+parámetros de consulta que indican el tipo de acceso que se solicita. Multinexo maneja la autenticación del usuario y el
+consentimiento del usuario. El resultado es un código de autorización, que la aplicación puede intercambiar por un token
+de acceso y un token de actualización.</p>
+
+<p>La aplicación debe almacenar el token de actualización para uso futuro y usal el token de acceso para acceder a la API
+de Multinexo. Una vez que el token de acceso caduca, la aplicación usa el token de actualización para obtener uno nuevo.</p>
+
+<h5 id="obtención-de-tokens-de-acceso">Obtención de tokens de acceso</h5>
+
+<h6 id="paso-1-establecer-los-parámetros-de-autorización">Paso 1: Establecer los parámetros de autorización</h6>
+
+<p>El primer paso es crear la solicitud de autorización. Esa solicitud establece parámetros que identifican su aplicación
+y definen los permisos que el usuario deberá otorgar a su aplicación.</p>
+
+<p>El punto final OAuth 2.0 de Multinexo está en <code class="highlighter-rouge">https://api.multinexo.com/auth/v1/authorize</code>. El servidor de autorización 
+de Multinexo admite los siguientes parámetros de cadena de consulta para aplicaciones de servidor web.</p>
+
+<ul>
+  <li>client_id: <strong>Requerido.</strong> El ID de cliente para su aplicación. Lo puede encontrar en Mis Aplicaciones.</li>
+  <li>redirect_uri: <strong>Requerido.</strong> Determina dónde el servidor redirige al usuario después de que el usuario complete el 
+ flujo de autorización. El valor debe coincidir exactamente con uno de los URI de redireccionamiento autorizador para el 
+ cliente que se configuró en Mis Aplicaciones. Si no coincide obtendrá un error.</li>
+</ul>
+
+<h6 id="paso-2-redireccionar-al-servidor-de-multinexo">Paso 2: Redireccionar al servidor de Multinexo</h6>
+
+<p>Redireccione al usuario al servidor de OAuth 2.0 de Multinexo para iniciar el proceso de autenticación y autorización.
+ Por lo general, esto ocurre cuando su aplicación primero necesita acceder a los datos del usuario.</p>
+
+<p>Ejemplo de redireccionamiento al servidor de autorización de Multinexo:</p>
+
+<p><code class="highlighter-rouge">https://api.multinexo.com/auth/v1/authorization?response_type=code&amp;client_id=client_id&amp;redirect_uri=http%3A%2F%2Foauth2.example.com%2Fcallback</code></p>
+
+<p>El servidor de Multinexo autentica al usuario y obtiene el consentimiento del usuario para que su aplicación acceda a 
+ los ámbitos solicitados. La respuesta se envía de vuelta a su aplicación utilizando la URL de redireccionamiento que
+ especificó.</p>
+
+<h6 id="paso-3-multinexo-solicita-consentimiento-del-usuario">Paso 3: Multinexo solicita consentimiento del usuario</h6>
+
+<p>En este paso, el usuario decide si concede a su aplicación el acceso solicitado. En esta etapa, Multinexo muestra una 
+ ventana de consentimiento que muestra el nombre de su aplicación y los servicios API de Multinexo a los que solicita
+ permiso para acceder con las credenciales de autorización al usuario. El usuario puede consentir o negarse a otorgar 
+ acceso a su aplicación.</p>
+
+<h6 id="paso-4-manejar-la-respuesta-del-servidor">Paso 4: Manejar la respuesta del servidor</h6>
+
+<p>El servidor responde a la solicitud de acceso de su aplicación utilizando la URL especificada en la solicitud. Si el 
+ usuario aprueba la solicitud de acceso, la respuesta contiene un código de autorización. Si el usuario no aprueba la 
+ solicitud, la respuesta contiene un mensaje de error.</p>
+
+<p>Respuesta de código de autorización:</p>
+
+<p><code class="highlighter-rouge">https://oauth2.example.com/auth?code=4MI67q7Wasd91a-oMsCeMao89fd87dasUB7</code></p>
+
+<p><em><strong>Importante:</strong> si su punto final de respuesta representa una página HTML, cualquier recurso en esa página podrá ver el 
+código de autorización en la URL. Las secuencias de comandos pueden leer la URL directamente, y la URL en el Referer de
+HTTP puede enviarse a cualquiera o a todos los recursos de la página. Considere cuidadosamente si desea enviar 
+credenciales de autorización a todos los recursos en esa página (especialmente los scripts de terceros, como complementos
+sociales y análisis). Para evitar este problema, recomendamos que el servidor primero maneje la solicitud, luego redirija
+a otra URL que no incluya los parámetros de respuesta.</em></p>
+
+<h6 id="paso-5-intercambio-de-código-de-autorización-para-obtener-tokens">Paso 5: Intercambio de código de autorización para obtener tokens</h6>
+
+<p>Una vez que el servidor web recibe el código de autorización, puede intercambiar el código de autorización por un token 
+de acceso.</p>
+
+<p>Para intercambiar un código de autorización para un token de acceso, llame al siguiente punto final:</p>
+
+<p><code class="highlighter-rouge">https://api.multinexo.com/auth/v1/token</code></p>
+
+<p>y configure los siguientes parámetros:</p>
+
+<ul>
+  <li>code: El código de autorización devuelto en la solicitud inicial.</li>
+  <li>client_id: El ID de cliente obtenido en Mis Aplicaciones.</li>
+  <li>client_secret: El secreto del cliente obtenido en Mis Aplicaciones.</li>
+  <li>redirect_uri: El URI de redireccionamiento configurado para su aplicación en Mis Aplicaciones.</li>
+  <li>grant_type: Como se define en la especificación OAuth 2.0, este campo debe contener un ‘authorization_code’.</li>
+</ul>
+
+<p>El siguiente fragmento muestra una solicitud de muestra:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /auth/v1/token HTTP/1.1
+Host: api.multinexo.com
+Content-Type: application/x-www-form-urlencoded
+
+code=4MI67q7Wasd91a-oMsCeMao89fd87dasUB7
+client_id=your_client_id&amp;
+client_secret=your_client_secret&amp;
+redirect_uri=https://oauth2.example.com/code&amp;
+grant_type=authorization_code
+</code></pre></div></div>
+
+<p>Multinexo responde a esta solicitud devolviendo un objeto JSON que contiene un token de acceso de corta duración y un 
+ token de actualización. La respuesta contiene los siguientes parámetros:</p>
+
+<ul>
+  <li>access_token: El token que enviará su aplicación para autorizar una solicitud de la API de Multinexo.</li>
+  <li>refresh_token: Un token que puede usar para obtener un nuevo token de acceso. Los tokens de actualización son válidos
+ hasta que el usuario revoque el acceso.</li>
+  <li>expires_in: La vida útil restante del token de acceso en segundos.</li>
+  <li>token_type: El tipo de token devuelto. En este momento, el valor de este campo siempre se establece en Bearer.</li>
+</ul>
+
+<p><em><strong>Importante:</strong> su aplicación debe almacenar ambos tokens en una ubicación segura y duradera que sea accesible entre 
+diferentes invocaciones de su aplicación. El token de actualización permite que su aplicación obtenga un nuevo 
+token de acceso si el que tiene caduca. Como tal, si su aplicación pierde el token de actualización, el usuario 
+deberá repetir el flujo de consentimiento de OAuth 2.0 para que su aplicación pueda obtener un nuevo token de actualización.</em></p>
+
+<p>El siguiente fragmento muestra una respuesta de muestra:</p>
+
+<pre><code class="language-json5">{
+  "access_token":"23fFAGMKGLJru1FTz65GzhT3Zg",
+  "expires_in":3920,
+  "token_type":"Bearer",
+  "refresh_token":"23xEoDS544iW3cxlI7yDbSDSMJKL01kVNJMK5C-769HOF2aQbI"
+}
+</code></pre>
+
+<p>Después de que su aplicación obtenga un token de acceso, puede usar el token para realizar llamadas a la API de Multinexo
+en nombre de una cuenta de usuario determinada. Para hacer esto, incluya el token de acceso en una solicitud a la API
+incluyendo un access_token de consulta o un encabezado Authorization: Bearer de HTTP. Cuando sea posible, el encabezado
+HTTP es preferible, porque las cadenas de consulta tienden a ser visibles en los registros del servidor.</p>
+</div>
+                <!-- <p class="text-center">
+                  <br />
+                  <a target="_blank" href="https://github.com/multinexo/dev.multinexo.com//_docs/0.0.23/authorization/web_servers.md" class="btn btn-default githubEditButton" role="button">
+                    <i class="fa fa-pencil fa-lg"></i> Mejorar esta documetnació
+                  </a>
+                </p> -->
+                <hr>
+              </div>
+          </div>
+      </div>
+
+
+        <footer class="footer">
+    <div class="container">
+        <p class="text-center">
+            Multinexo 2019 |
+            Powered by <a href="https://multinexo.com/">Multinexo</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+        </main>
+    </div>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+
+</body>
+
+</html>
