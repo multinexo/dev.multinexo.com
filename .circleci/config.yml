@@ -20,6 +20,9 @@ jobs:
           name: Install dependencies
           command: bundle install
       - run:
+          name: Git user config
+          command:  - git config --global user.name "BB pipeline" && git config --global user.email "pipeline@reyesoft.com"
+      - run:
           name: Publish to Github Pages
           command: bundle exec jgd -r v2.0
 workflows:
