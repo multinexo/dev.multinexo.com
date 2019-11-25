@@ -12,6 +12,6 @@
     "postinstall": "cp -r node_modules/@reyesoft/dev-docs-base/site/* . && cp -r node_modules/@reyesoft/dev-docs-base/site/.[^.]* ."
   },
   "dependencies": {
-    "@reyesoft/dev-docs-base": "0.0.6"
+    "@reyesoft/dev-docs-base": "0.0.10"
   }
 }
