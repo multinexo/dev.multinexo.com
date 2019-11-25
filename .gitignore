@@ -6,7 +6,6 @@ node_modules/
 .idea/vcs.xml
 .idea/markdown-navigator.xml
 
-.circleci
 _plugins
 _edition_files
 _includes
