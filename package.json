@@ -7,5 +7,11 @@
     "env": {
       "browser": true
     }
+  },
+  "scripts": {
+    "postinstall": "cp "
+  },
+  "dependencies": {
+    "@reyesoft/dev-docs-base": "0.0.2"
   }
 }
