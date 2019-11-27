@@ -8,9 +8,17 @@ description: >
   cuentas corrientes, multiusuario, ¡y más!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: https://dev.multinexo.com # the base hostname & protocol for your site
+appurl: "https://multinexo.com"
 apiurl: https://api.multinexo.com
+api_name: "Multinexo"
 git_address: https://github.com/dev.multinexo.com
 git_edit_address: https://github.com/multinexo/dev.multinexo.com/
+show_styleguide: true
+
+# images
+logo_url: "/img/multinexo_logotype_colored.svg"
+tip_image: "img/multinexo-tip.png"
+styleguide_img_url: "/img/styleguide/multinexo.jpg"
 
 # Build settings
 markdown: kramdown

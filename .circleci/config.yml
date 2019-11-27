@@ -2,12 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.1
+      - image: circleci/ruby:2.5.1-node-browsers
     steps:
       - checkout
       - run:
           name: Install dependencies
-          command: bundle install
+          command: |
+            npm install
+            bundle install
       - run:
           name: Build peroject
           command: bundle exec jekyll build
@@ -18,7 +20,9 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: bundle install
+          command: |
+            npm install
+            bundle install
       - run:
           name: Git user config
           command: git config --global user.name "BB pipeline" && git config --global user.email "pipeline@reyesoft.com"
