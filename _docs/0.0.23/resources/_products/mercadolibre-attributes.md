@@ -9,8 +9,6 @@ attributes:
   -
     name: title
     crud: 'create, read, update'
-    rules:
-      - 'max:96'
   -
     name: description
     crud: 'create, read, update'
@@ -26,7 +24,6 @@ attributes:
   -
     name: price
     crud: 'create, read, update'
-    value_type: numeric
   -
     name: currency_id
     crud: 'create, read, update'
@@ -54,18 +51,10 @@ attributes:
   -
     name: official_store_id
     crud: 'create, read, update'
-  -
-    name: fortype
-    crud: 'create, read, update'
-    value_type: 'in [company, product]'
 relationships:
   -
     resource: publication
     alias: publication
-    crud: 'create, read, update'
-  -
-    resource: company
-    alias: company
     crud: 'create, read, update'
 
 ---

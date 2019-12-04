@@ -14,16 +14,16 @@ attributes:
     crud: 'create, read, update'
   -
     name: item_url
-    crud: 'create, read, update'
+    crud: read
   -
     name: item_last_update
-    crud: 'create, read, update'
+    crud: read
   -
     name: item_status
-    crud: 'create, read, update'
+    crud: read
   -
     name: observations
-    crud: 'create, read, update'
+    crud: read
 relationships:
   -
     resource: product

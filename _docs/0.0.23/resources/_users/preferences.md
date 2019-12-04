@@ -12,6 +12,10 @@ attributes:
   -
     name: value
     crud: 'create, read, update'
-relationships: {  }
+relationships:
+  -
+    resource: user
+    alias: user
+    crud: 'create, read, update'
 
 ---

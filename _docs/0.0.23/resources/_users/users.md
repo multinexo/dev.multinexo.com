@@ -42,10 +42,14 @@ relationships:
   -
     resource: notifications
     alias: notifications
-    crud: read
+    crud: 'create, read, update'
   -
     resource: company_users
     alias: company_users
-    crud: read
+    crud: 'create, read, update'
+  -
+    resource: auth_clients
+    alias: auth_clients
+    crud: 'create, read, update'
 
 ---

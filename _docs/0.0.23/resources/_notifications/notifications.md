@@ -17,9 +17,11 @@ attributes:
     crud: 'create, read, update'
     required: true
   -
-    name: read_at
+    name: read
     crud: 'read, update'
-    filter: DateFilter
+  -
+    name: viewed
+    crud: 'read, update'
   -
     name: created_at
     crud: read
