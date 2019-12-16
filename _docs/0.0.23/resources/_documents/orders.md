@@ -82,42 +82,42 @@ relationships:
   -
     resource: currency
     alias: currency
-    crud: read
+    crud: 'create, read, update'
   -
     resource: entity
     alias: entity
-    crud: read
+    crud: 'create, read, update'
   -
     resource: physicalpos
     alias: physicalpos
-    crud: read
+    crud: 'create, read, update'
   -
     resource: details
     alias: details
-    crud: read
+    crud: 'create, read, update'
   -
     resource: invoices
     alias: invoices
-    crud: read
+    crud: 'create, read, update'
   -
     resource: quotations
     alias: quotations
-    crud: read
+    crud: 'create, read, update'
   -
     resource: orders
     alias: orders
-    crud: read
+    crud: 'create, read, update'
   -
     resource: cashier_entries
     alias: cashier_entries
-    crud: read
+    crud: 'create, read, update'
   -
     resource: costs
     alias: costs
-    crud: read
+    crud: 'create, read, update'
   -
     resource: seller
     alias: seller
-    crud: read
+    crud: 'create, read, update'
 
 ---

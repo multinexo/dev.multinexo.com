@@ -87,6 +87,10 @@ attributes:
       - nullable
       - 'digits_between:0,8'
     value_type: integer
+  -
+    name: has_costs
+    crud: read
+    filter: HasCostsFilter
 relationships:
   -
     resource: details
@@ -119,6 +123,10 @@ relationships:
   -
     resource: documents
     alias: documents
+    crud: 'create, read, update'
+  -
+    resource: costs
+    alias: costs
     crud: 'create, read, update'
   -
     resource: seller

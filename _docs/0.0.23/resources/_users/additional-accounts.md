@@ -18,10 +18,6 @@ attributes:
   -
     name: last_login
     crud: read
-relationships:
-  -
-    resource: user
-    alias: user
-    crud: 'create, read, update'
+relationships: {  }
 
 ---

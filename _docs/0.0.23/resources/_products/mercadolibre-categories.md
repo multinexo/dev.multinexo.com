@@ -1,6 +1,6 @@
 ---
-resource: meli_categories
-permalink: /docs/0.0.23/resources/meli_categories/
+resource: mercadolibre_categories
+permalink: /docs/0.0.23/resources/mercadolibre_categories/
 version: 0.0.23
 singular: resource
 section: Products
@@ -12,7 +12,12 @@ attributes:
     filter: StringFilter
     sortable: 'true'
   -
-    name: parent_id
+    name: publication_meta_keys
+    crud: 'create, read, update'
+    filter: StringFilter
+    sortable: 'true'
+  -
+    name: parents
     crud: 'create, read, update'
     filter: StringFilter
     sortable: 'true'

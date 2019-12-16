@@ -37,5 +37,9 @@ relationships:
     resource: mercadolibre_attributes
     alias: mercadolibre_attributes
     crud: 'create, read, update'
+  -
+    resource: publication_metas
+    alias: publication_metas
+    crud: 'create, read, update'
 
 ---

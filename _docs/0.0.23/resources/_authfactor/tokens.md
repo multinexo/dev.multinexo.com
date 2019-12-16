@@ -1,6 +1,6 @@
 ---
-resource: auth_clients
-permalink: /docs/0.0.23/resources/auth_clients/
+resource: tokens
+permalink: /docs/0.0.23/resources/tokens/
 version: 0.0.23
 singular: resource
 section: AuthFactor
@@ -9,18 +9,16 @@ attributes:
   -
     name: name
     crud: 'create, read, update'
-    filter: StringFilter
-    sortable: 'true'
-  -
-    name: redirect
-    crud: 'create, read, update'
   -
     name: revoked
-    crud: 'read, update'
+    crud: 'create, read, update'
+  -
+    name: expires_at
+    crud: read
 relationships:
   -
-    resource: user
-    alias: user
+    resource: auth_client
+    alias: auth_client
     crud: 'create, read, update'
 
 ---
