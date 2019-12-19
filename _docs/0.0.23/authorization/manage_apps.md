@@ -27,5 +27,10 @@ misma podrás ver los detalles necesario para conectarte con el servidor de Mult
 - ID
 - Secret
 
-A partir de este momento tu apliación quedará registrada en Mutlinexo. El próximo paso será [obtener los datos de acceso
-para poder hacer pedidos al servidor]( {{ "/docs/"	"/docs/" | append: site.version | append: "/authorization/" | prepend: site.baseurl }} ).
+A partir de este momento tu apliación quedará registrada en Mutlinexo. El próximo paso será obtener los datos de acceso
+para poder hacer pedidos al servidor, para lo cual deberás seguir el procedimeinto correspondiente al tipo de aplicación
+que estés desarrollando:
+
+- [Aplicaciones de servidor]({{ "/docs/" | append: site.version | append: "/web_servers/" | prepend: site.baseurl }})
+- [Aplicaciones de cliente (navegador)]({{ "/docs/" | append: site.version | append: "/clients_side_apps/" | prepend: site.baseurl }})
+- [Aplicaciones instalables]({{ "/docs/" | append: site.version | append: "/installed_apps/" | prepend: site.baseurl }})
