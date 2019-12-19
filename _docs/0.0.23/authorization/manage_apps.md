@@ -10,7 +10,7 @@ los datos necesarios para conectarla con el sistema de gestión.
 
 ## Registrar tu aplicación en Multinexo
 
-Podrás registrar tu apliación desde la sección **Mis aplicaciones**, que hallarás al hacer click sobre el menú de
+Podrás registrar tu aplicación desde la sección **Mis aplicaciones**, que hallarás al hacer click sobre el menú de
 usuario. Desde el botón **Agregar** ubicado en la esquina inferior izquierda podrás abrir el formulario de creación de
 aplicaciones: 
 
