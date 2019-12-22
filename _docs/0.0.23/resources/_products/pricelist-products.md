@@ -50,6 +50,10 @@ relationships:
     alias: product
     crud: 'create, read, update'
   -
+    resource: futureprice
+    alias: futureprice
+    crud: 'create, read, update'
+  -
     resource: pricelist
     alias: pricelist
     crud: 'create, read, update'

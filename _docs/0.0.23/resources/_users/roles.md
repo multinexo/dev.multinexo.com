@@ -7,22 +7,23 @@ section: Users
 partOf: company
 attributes:
   -
+    name: deleted
+    crud: read
+    filter: DeletedFilter
+  -
     name: name
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     required: true
     value_type: string
   -
     name: is_admin
-    crud: 'create, read, update'
+    crud: read
   -
     name: description
     crud: 'create, read, update'
     value_type: string
-  -
-    name: deleted
-    crud: read
-    filter: DeletedFilter
 relationships:
   -
     resource: users

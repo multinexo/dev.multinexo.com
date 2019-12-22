@@ -10,12 +10,16 @@ attributes:
     name: content_type
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     required: true
     value_type: 'in [error, warning, info, success]'
   -
     name: message
     crud: 'create, read, update'
     required: true
+  -
+    name: href
+    crud: read
   -
     name: read
     crud: 'read, update'
@@ -26,6 +30,7 @@ attributes:
     name: created_at
     crud: read
     filter: DateFilter
+    sortable: 'true'
 relationships: {  }
 
 ---

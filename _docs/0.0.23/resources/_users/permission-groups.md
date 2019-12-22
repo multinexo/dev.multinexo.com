@@ -11,7 +11,6 @@ attributes:
     crud: 'create, read, update'
     required: true
     rules:
-      - 'unique:permission_groups'
       - 'max:255'
   -
     name: slug
@@ -23,6 +22,6 @@ relationships:
   -
     resource: permissions
     alias: permissions
-    crud: 'create, read'
+    crud: 'create, read, update'
 
 ---
