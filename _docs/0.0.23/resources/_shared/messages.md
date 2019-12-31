@@ -7,16 +7,16 @@ section: Shared
 partOf: company
 attributes:
   -
-    name: to
-    crud: 'create, read, update'
-    filter: LikeFilter
-    required: true
-  -
     name: subject
     crud: 'create, read, update'
   -
     name: content
     crud: 'create, read, update'
+    required: true
+  -
+    name: to
+    crud: 'create, read, update'
+    filter: LikeFilter
     required: true
   -
     name: status

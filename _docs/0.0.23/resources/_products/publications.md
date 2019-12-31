@@ -41,5 +41,9 @@ relationships:
     resource: publication_metas
     alias: publication_metas
     crud: 'create, read, update'
+  -
+    resource: mercadolibre_category
+    alias: mercadolibre_category
+    crud: 'create, read, update'
 
 ---

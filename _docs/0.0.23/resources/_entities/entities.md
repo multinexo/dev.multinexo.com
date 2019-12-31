@@ -7,15 +7,6 @@ section: Entities
 partOf: company
 attributes:
   -
-    name: name
-    crud: 'create, read, update'
-    filter: StringFilter
-    sortable: 'true'
-    required: true
-    value_type: string
-    rules:
-      - 'max:96'
-  -
     name: contact_name
     crud: 'create, read, update'
     value_type: string
@@ -51,12 +42,6 @@ attributes:
     rules:
       - 'max:96'
   -
-    name: entity_type
-    crud: 'create, read, update'
-    filter: EnumFilter
-    required: true
-    value_type: 'in [client, supplier, employee, creditor, subdist, prevent]'
-  -
     name: observations
     crud: 'create, read, update'
   -
@@ -66,12 +51,6 @@ attributes:
     name: balance_at
     crud: read
   -
-    name: identification_number
-    crud: 'create, read, update'
-    filter: StringFilter
-    rules:
-      - 'max:15'
-  -
     name: latitude
     crud: 'create, read, update'
   -
@@ -80,20 +59,6 @@ attributes:
   -
     name: has_account
     crud: 'create, read, update'
-  -
-    name: deleted
-    crud: read
-    filter: DeletedFilter
-  -
-    name: pareto_class
-    crud: read
-    filter: EnumFilter
-    sortable: 'true'
-  -
-    name: pareto_percent
-    crud: read
-    filter: NumberFilter
-    sortable: 'true'
   -
     name: pdf_url
     crud: read
@@ -106,6 +71,38 @@ attributes:
     crud: 'create, read, update'
     required: true
     value_type: integer
+  -
+    name: name
+    crud: 'create, read, update'
+    filter: StringFilter
+    required: true
+    value_type: string
+    rules:
+      - 'max:96'
+  -
+    name: entity_type
+    crud: 'create, read, update'
+    filter: EnumFilter
+    required: true
+    value_type: 'in [client, supplier, employee, creditor, subdist, prevent]'
+  -
+    name: identification_number
+    crud: 'create, read, update'
+    filter: StringFilter
+    rules:
+      - 'max:15'
+  -
+    name: deleted
+    crud: read
+    filter: DeletedFilter
+  -
+    name: pareto_class
+    crud: read
+    filter: EnumFilter
+  -
+    name: pareto_percent
+    crud: read
+    filter: NumberFilter
 relationships:
   -
     resource: transactions

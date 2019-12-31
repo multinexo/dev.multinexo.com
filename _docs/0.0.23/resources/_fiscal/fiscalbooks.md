@@ -11,19 +11,8 @@ attributes:
     crud: 'create, read, update'
     value_type: string
   -
-    name: fiscalbook_type
-    crud: 'create, read, update'
-    filter: EnumFilter
-    value_type: 'in [sells, buys]'
-  -
     name: from
     crud: 'create, read, update'
-    rules:
-      - iso_date
-  -
-    name: to
-    crud: 'create, read, update'
-    sortable: 'true'
     rules:
       - iso_date
   -
@@ -47,6 +36,17 @@ attributes:
   -
     name: url_citi
     crud: read
+  -
+    name: fiscalbook_type
+    crud: 'create, read, update'
+    filter: EnumFilter
+    value_type: 'in [sells, buys]'
+  -
+    name: to
+    crud: 'create, read, update'
+    filter: DateFilter
+    rules:
+      - iso_date
 relationships: {  }
 
 ---

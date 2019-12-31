@@ -9,12 +9,14 @@ attributes:
   -
     name: app_type
     crud: 'create, read, update'
+    filter: StringFilter
     sortable: 'true'
     required: true
     value_type: string
   -
     name: name
     crud: 'create, read, update'
+    filter: StringFilter
     sortable: 'true'
 relationships:
   -

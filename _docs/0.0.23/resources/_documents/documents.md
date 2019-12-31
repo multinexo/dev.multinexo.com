@@ -21,10 +21,6 @@ attributes:
     crud: 'create, read, update'
     value_type: numeric
   -
-    name: emission_date
-    crud: 'create, read, update'
-    filter: EmissionDateFilter
-  -
     name: observation
     crud: 'create, read, update'
   -
@@ -49,6 +45,10 @@ attributes:
     crud: 'create, read, update'
     required: true
     value_type: boolean
+  -
+    name: emission_date
+    crud: 'create, read, update'
+    filter: EmissionDateFilter
   -
     name: section
     crud: 'create, read, update'

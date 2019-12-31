@@ -7,10 +7,6 @@ section: Documents
 partOf: company
 attributes:
   -
-    name: date
-    crud: 'create, read, update'
-    filter: DateFilter
-  -
     name: cost
     crud: 'create, read, update'
   -
@@ -22,6 +18,10 @@ attributes:
   -
     name: revenue
     crud: 'create, read, update'
+  -
+    name: date
+    crud: 'create, read, update'
+    filter: DateFilter
 relationships: {  }
 
 ---

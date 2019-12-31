@@ -7,80 +7,16 @@ section: Products
 partOf: company
 attributes:
   -
-    name: name
-    crud: 'create, read, update'
-    filter: StringFilter
-    sortable: 'true'
-    required: true
-    rules:
-      - 'max:96'
-  -
-    name: saleable
-    crud: 'create, read, update'
-    filter: SaleableFilter
-    sortable: 'true'
-  -
     name: description
     crud: 'create, read, update'
-  -
-    name: sku
-    crud: 'create, read, update'
-    filter: StringFilter
-    rules:
-      - 'max:96'
-  -
-    name: internal_code
-    crud: 'create, read, update'
-    filter: StringFilter
-    rules:
-      - 'max:96'
-  -
-    name: supplier_code
-    crud: 'create, read, update'
-    filter: StringFilter
-    rules:
-      - 'max:96'
-  -
-    name: conduct
-    crud: 'create, read, update'
-    filter: EnumFilter
-    value_type: 'in [variant_parent, variant_common, compound, common]'
-    required: true
-  -
-    name: product_type
-    crud: 'create, read, update'
-    filter: EnumFilter
-    rules:
-      - 'max:96'
-    value_type: 'in [service, product]'
   -
     name: duration
     crud: 'create, read, update'
     value_type: integer
   -
-    name: stock_type
-    crud: 'create, read, update'
-    filter: EnumFilter
-    value_type: 'in [disabled, negative, positive]'
-  -
-    name: replacement_cost
-    crud: 'create, read, update'
-    value_type: numeric
-    rules:
-      - 'max:999999'
-  -
-    name: stock
-    crud: 'create, read'
-    value_type: numeric
-  -
     name: stock_alert
     crud: 'create, read, update'
     value_type: numeric
-  -
-    name: stock_alert_percent
-    crud: 'create, read, update'
-    filter: NumberFilter
-    sortable: 'true'
   -
     name: stock_desired
     crud: 'create, read, update'
@@ -117,15 +53,17 @@ attributes:
     name: units_per_box
     crud: 'create, read, update'
   -
-    name: deleted
-    crud: 'create, read, update'
-    filter: DeletedFilter
-  -
     name: updated_at
     crud: 'create, read, update'
   -
     name: allow_fractions
     crud: 'create, read, update'
+  -
+    name: replacement_cost
+    crud: 'create, read, update'
+    value_type: numeric
+    rules:
+      - 'max:999999'
   -
     name: price
     crud: read
@@ -138,6 +76,65 @@ attributes:
   -
     name: prevent_price
     crud: read
+  -
+    name: name
+    crud: 'create, read, update'
+    filter: StringFilter
+    required: true
+    rules:
+      - 'max:96'
+  -
+    name: saleable
+    crud: 'create, read, update'
+    filter: SaleableFilter
+  -
+    name: sku
+    crud: 'create, read, update'
+    filter: StringFilter
+    rules:
+      - 'max:96'
+  -
+    name: internal_code
+    crud: 'create, read, update'
+    filter: StringFilter
+    rules:
+      - 'max:96'
+  -
+    name: supplier_code
+    crud: 'create, read, update'
+    filter: StringFilter
+    rules:
+      - 'max:96'
+  -
+    name: conduct
+    crud: 'create, read, update'
+    filter: EnumFilter
+    value_type: 'in [variant_parent, variant_common, compound, common]'
+    required: true
+  -
+    name: product_type
+    crud: 'create, read, update'
+    filter: EnumFilter
+    rules:
+      - 'max:96'
+    value_type: 'in [service, product]'
+  -
+    name: stock_type
+    crud: 'create, read, update'
+    filter: EnumFilter
+    value_type: 'in [disabled, negative, positive]'
+  -
+    name: stock_alert_percent
+    crud: 'create, read, update'
+    filter: NumberFilter
+  -
+    name: stock
+    crud: 'create, read'
+    value_type: numeric
+  -
+    name: deleted
+    crud: 'create, read, update'
+    filter: DeletedFilter
 relationships:
   -
     resource: author

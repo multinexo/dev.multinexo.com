@@ -3,7 +3,7 @@ resource: auth_clients
 permalink: /docs/0.0.23/resources/auth_clients/
 version: 0.0.23
 singular: resource
-section: AuthFactor
+section: Users
 partOf: user
 attributes:
   -
@@ -19,8 +19,8 @@ attributes:
     crud: 'read, update'
 relationships:
   -
-    resource: user
-    alias: user
+    resource: author
+    alias: author
     crud: 'create, read, update'
 
 ---

@@ -10,7 +10,6 @@ attributes:
     name: name
     crud: 'create, read, update'
     filter: StringFilter
-    sortable: 'true'
     required: true
     rules:
       - 'max:96'
