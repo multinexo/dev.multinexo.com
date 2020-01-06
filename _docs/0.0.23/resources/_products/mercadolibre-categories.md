@@ -17,7 +17,7 @@ attributes:
     filter: StringFilter
     sortable: 'true'
   -
-    name: parents
+    name: full_name
     crud: 'create, read, update'
     filter: StringFilter
     sortable: 'true'
