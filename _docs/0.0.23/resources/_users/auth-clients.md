@@ -16,7 +16,7 @@ attributes:
     crud: 'create, read, update'
   -
     name: revoked
-    crud: 'read, update'
+    crud: read
 relationships:
   -
     resource: author
