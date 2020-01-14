@@ -21,6 +21,12 @@ attributes:
     name: alias
     crud: 'create, read, update'
     filter: LikeFilter
+  -
+    name: mercadopago_qr_url
+    crud: read
+  -
+    name: mercadopago_qr_pdf
+    crud: read
 relationships:
   -
     resource: cashier_balances
