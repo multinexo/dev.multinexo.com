@@ -144,5 +144,9 @@ relationships:
     resource: seller
     alias: seller
     crud: 'create, read, update'
+  -
+    resource: recommended_products
+    alias: recommended_products
+    crud: 'create, read, update'
 
 ---
