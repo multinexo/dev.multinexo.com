@@ -20,7 +20,7 @@ attributes:
     required: true
     value_type: 'in [manual_a, manual_b, manual_c, manual_e, fiscal_printer, electronic]'
   -
-    name: status
+    name: enabled
     crud: 'create, read, update'
     filter: EnumFilter
   -
