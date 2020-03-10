@@ -34,7 +34,7 @@ jobs:
             rm .gitignore
             git add .
             git commit -m "Deploying..."
-            git push --set-upstream origin/temp-deploy-branch
+            git push --set-upstream origin temp-deploy-branch
             bundle exec jgd -r temp-deploy-branch
             git checkout v2.0
             git push origin --delete temp-deploy-branch
