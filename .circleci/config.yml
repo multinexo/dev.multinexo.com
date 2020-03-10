@@ -15,7 +15,7 @@ jobs:
           command: bundle exec jekyll build
   deploy-to-ghpages:
     docker:
-      - image: circleci/ruby:2.5.1
+      - image: circleci/ruby:2.5.1-node
     steps:
       - checkout
       - run:
