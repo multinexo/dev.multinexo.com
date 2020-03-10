@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.1-node
+      - image: circleci/ruby:2.5.1-node-browsers
     steps:
       - checkout
       - run:
@@ -15,7 +15,7 @@ jobs:
           command: bundle exec jekyll build
   deploy-to-ghpages:
     docker:
-      - image: circleci/ruby:2.5.1-node
+      - image: circleci/ruby:2.5.1
     steps:
       - checkout
       - run:
@@ -26,9 +26,18 @@ jobs:
       - run:
           name: Git user config
           command: git config --global user.name "BB pipeline" && git config --global user.email "pipeline@reyesoft.com"
+
       - run:
-          name: Publish to Github Pages
-          command: bundle exec jgd -r v2.0
+          name: Publish to GitHub pages
+          command: |
+            git checkout -b temp-deploy-branch
+            rm .gitignore
+            git add .
+            git commit -m "Deploying..."
+            git push --set-upstream origin/temp-deploy-branch
+            bundle exec jgd -r temp-deploy-branch
+            git push origin --delete temp-deploy-branch
+
 workflows:
   version: 2
   build:
