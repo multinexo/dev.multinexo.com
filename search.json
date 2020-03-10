@@ -74,6 +74,12 @@
   
     
     {
+      "title": "Tokens",
+      "url": "/docs/0.0.23/resources/tokens/"
+    },
+  
+    
+    {
       "title": "Behaviors",
       "url": "/docs/0.0.23/resources/behaviors/"
     },
@@ -106,6 +112,12 @@
     {
       "title": "Transactions",
       "url": "/docs/0.0.23/resources/transactions/"
+    },
+  
+    
+    {
+      "title": "Permissions",
+      "url": "/docs/0.0.23/resources/permissions/"
     },
   
     
@@ -308,14 +320,14 @@
   
     
     {
-      "title": "Meli Categories",
-      "url": "/docs/0.0.23/resources/meli_categories/"
+      "title": "Mercadolibre Attributes",
+      "url": "/docs/0.0.23/resources/mercadolibre_attributes/"
     },
   
     
     {
-      "title": "Mercadolibre Attributes",
-      "url": "/docs/0.0.23/resources/mercadolibre_attributes/"
+      "title": "Mercadolibre Categories",
+      "url": "/docs/0.0.23/resources/mercadolibre_categories/"
     },
   
     
@@ -358,6 +370,12 @@
     {
       "title": "Products",
       "url": "/docs/0.0.23/resources/products/"
+    },
+  
+    
+    {
+      "title": "Publication Metas",
+      "url": "/docs/0.0.23/resources/publication_metas/"
     },
   
     
@@ -410,6 +428,12 @@
   
     
     {
+      "title": "Auth Clients",
+      "url": "/docs/0.0.23/resources/auth_clients/"
+    },
+  
+    
+    {
       "title": "Company Users",
       "url": "/docs/0.0.23/resources/company_users/"
     },
@@ -418,12 +442,6 @@
     {
       "title": "Permission Groups",
       "url": "/docs/0.0.23/resources/permission_groups/"
-    },
-  
-    
-    {
-      "title": "Permissions",
-      "url": "/docs/0.0.23/resources/permissions/"
     },
   
     

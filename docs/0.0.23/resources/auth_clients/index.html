@@ -16,7 +16,7 @@
       gtag('config', 'UA-29898815-5');
     </script>
 
-    <title>Plans</title>
+    <title>Auth Clients</title>
     <meta name="description" content="">
 
 
@@ -31,23 +31,23 @@
 
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Plans | Multinexo Developers</title>
+<title>Auth Clients | Multinexo Developers</title>
 <meta name="generator" content="Jekyll v3.6.2" />
-<meta property="og:title" content="Plans" />
+<meta property="og:title" content="Auth Clients" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!" />
 <meta property="og:description" content="Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!" />
-<link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/resources/plans/" />
-<meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/plans/" />
+<link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/resources/auth_clients/" />
+<meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/auth_clients/" />
 <meta property="og:site_name" content="Multinexo Developers" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-10T14:25:55+00:00" />
 <script type="application/ld+json">
-{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Plans","dateModified":"2020-03-10T14:25:55+00:00","datePublished":"2020-03-10T14:25:55+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/plans/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/plans/"},"@context":"https://schema.org"}</script>
+{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Auth Clients","dateModified":"2020-03-10T14:25:55+00:00","datePublished":"2020-03-10T14:25:55+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/auth_clients/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/auth_clients/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/resources/plans/">
+    <link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/resources/auth_clients/">
     <link rel="alternate" type="application/rss+xml" title="Multinexo Developers" href="https://dev.multinexo.com/feed.xml" />
 </head>
 
@@ -517,12 +517,12 @@
           <div class="layout-row layout-align-center-start mdl-color--grey-50 flex width-100">
               <div class="flex-50 flex-rs-big-70 flex-sm-100 flex-rs-md-100 flex-md-100" style="margin: 20px 0; padding: 0 20px">
                 
-                  <h1>plans resource</h1>
+                  <h1>auth_clients resource</h1>
                   
 
 
 
-  <section><span class=get >GET </span>https://api.multinexo.complans</section>
+  <section><span class=get >GET </span>https://api.multinexo.comusers/{user_id}/auth_clients</section>
 
 
 
@@ -538,12 +538,17 @@
             <span class="code">create, read, update</span>
             
             
+              <a class="code" href="/docs/0.0.23/StringFilter">
+                StringFilter
+              </a>
+              <span class="code">Sortable</span>
+            
             
           </div>
         </dd>
       
         <dt>
-            key
+            redirect
         </dt>
         <dd>
           <div>
@@ -555,41 +560,11 @@
         </dd>
       
         <dt>
-            amount
+            revoked
         </dt>
         <dd>
           <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">numeric</span>
-            
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            limit
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">numeric</span>
-            
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            price_per_document
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">numeric</span>
+            <span class="code">read</span>
             
             
             
@@ -607,7 +582,7 @@
     
         <dt>
             
-              company_payments
+              author
             
         </dt>
         <dd>
@@ -615,8 +590,8 @@
             
               <span class="code">has one</span>
              of type:
-            <a href="/docs/resources/company_payments/">
-              company_payments
+            <a href="/docs/resources/author/">
+              author
             </a>
           </div>
         </dd>
@@ -629,6 +604,11 @@
     
     
     
+        <h4>Filter example</h4>
+        <section>
+          https://api.multinexo.comusers/{user_id}/auth_clients?filter[name]=someValue
+        </section>
+    
 
 
 
@@ -638,19 +618,17 @@
 <pre>
   {
     data: {
-      type: plans,
-      id: 547,
+      type: auth_clients,
+      id: 105,
       attributes: {
         name: someValue,
-        key: someValue,
-        amount: someValue,
-        limit: someValue,
-        price_per_document: someValue
+        redirect: someValue,
+        revoked: someValue
         },
       relationships: { 
-         company_payments:{
-          id: 672,
-          type: company_payments
+         author:{
+          id: 869,
+          type: author
         }
       }
     }
@@ -669,13 +647,13 @@
     
 
     <span class=get >GET </span>
-    https://api.multinexo.complans/&#123resource_id&#125
+    https://api.multinexo.comusers/{user_id}/auth_clients/&#123resource_id&#125
   </p>
   
   <p>
     
       <span class="post">POST</span>
-      https://api.multinexo.complans/
+      https://api.multinexo.comusers/{user_id}/auth_clients/
     
   </p>
 </section>
@@ -686,7 +664,7 @@
 </div>
                 <!-- <p class="text-center">
                   <br />
-                  <a target="_blank" href="https://github.com/multinexo/dev.multinexo.com//_docs/0.0.23/resources/_companies/plans.md" class="btn btn-default githubEditButton" role="button">
+                  <a target="_blank" href="https://github.com/multinexo/dev.multinexo.com//_docs/0.0.23/resources/_users/auth-clients.md" class="btn btn-default githubEditButton" role="button">
                     <i class="fa fa-pencil fa-lg"></i> Mejorar esta documetnació
                   </a>
                 </p> -->

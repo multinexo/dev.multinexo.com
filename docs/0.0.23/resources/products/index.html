@@ -41,9 +41,9 @@
 <meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/products/" />
 <meta property="og:site_name" content="Multinexo Developers" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-22T17:47:54+00:00" />
+<meta property="article:published_time" content="2020-03-10T14:25:55+00:00" />
 <script type="application/ld+json">
-{"description":"Special relationships Si es un producto en particular, entonces.","@type":"BlogPosting","headline":"Products","dateModified":"2019-11-22T17:47:54+00:00","datePublished":"2019-11-22T17:47:54+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/products/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/products/"},"@context":"https://schema.org"}</script>
+{"description":"Special relationships Si es un producto en particular, entonces.","@type":"BlogPosting","headline":"Products","dateModified":"2020-03-10T14:25:55+00:00","datePublished":"2020-03-10T14:25:55+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/products/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/products/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -62,7 +62,9 @@
         <nav class="mdl-navigation mdl-layout--large-screen-only links">
           <a href="/">Home</a>
           <a href="/docs/0.0.23/resources/products/">API</a>
-          <a href="/styleguide/intro">Guía de estilo</a>
+          
+            <a href="/styleguide/intro">Guía de estilo</a>
+          
           <!--  descomentar cuando esté listo el blog -->
           <!--<a href="/2017/05/03/jekyll-doc-theme.html">Blog</a>-->
         </nav>
@@ -87,7 +89,9 @@
   <nav class="mdl-navigation">
     <a class="mdl-navigation__link" href="">Home</a>
     <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">API</a>
-    <a class="mdl-navigation__link" href="/styleguide/intro">Guía de estilo</a>
+    
+      <a class="mdl-navigation__link" href="/styleguide/intro">Guía de estilo</a>
+    
     <form class="mdl-navigation__link" id="search-form">
       <div class="mdl-textfield mdl-js-textfield">
         <input class="mdl-textfield__input search-box-mobile" type="text" Placeholder="Buscar...">
@@ -168,6 +172,13 @@
           
         </nav>
       
+        <span class="mdl-layout-title">AuthFactor</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/tokens/">Tokens</a>
+          
+        </nav>
+      
         <span class="mdl-layout-title">Cashier</span>
         <nav class="mdl-navigation">
           
@@ -182,6 +193,13 @@
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/physicalpos/">Physicalpos</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/transactions/">Transactions</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Common</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permissions/">Permissions</a>
           
         </nav>
       
@@ -289,9 +307,9 @@
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/measures/">Measures</a>
           
-            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/meli_categories/">Meli Categories</a>
-          
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/mercadolibre_attributes/">Mercadolibre Attributes</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/mercadolibre_categories/">Mercadolibre Categories</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/pricelist_categories/">Pricelist Categories</a>
           
@@ -306,6 +324,8 @@
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/product_supplier/">Product Supplier</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/publication_metas/">Publication Metas</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/publications/">Publications</a>
           
@@ -333,11 +353,11 @@
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/additional_accounts/">Additional Accounts</a>
           
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/auth_clients/">Auth Clients</a>
+          
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/company_users/">Company Users</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permission_groups/">Permission Groups</a>
-          
-            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permissions/">Permissions</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/preferences/">Preferences</a>
           
@@ -502,7 +522,7 @@
 
 
 
-  <section><span class=get >GET </span>http://api.multinexo.com/v1/companies/{company_id}/products</section>
+  <section><span class=get >GET </span>https://api.multinexo.comcompanies/{company_id}/products</section>
 
 
 
@@ -511,135 +531,12 @@
     <dl>
       
         <dt>
-            name
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/StringFilter">
-                StringFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            saleable
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/SaleableFilter">
-                SaleableFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
             description
         </dt>
         <dd>
           <div>
             <span class="code">create, read, update</span>
             
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            sku
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/StringFilter">
-                StringFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            internal_code
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/StringFilter">
-                StringFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            supplier_code
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/StringFilter">
-                StringFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            conduct
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">in [variant_parent, variant_common, compound, common]</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/EnumFilter">
-                EnumFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            product_type
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">in [service, product]</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/EnumFilter">
-                EnumFilter
-              </a>
-              <span class="code">Sortable</span>
             
             
           </div>
@@ -660,53 +557,6 @@
         </dd>
       
         <dt>
-            stock_type
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">in [disabled, negative, positive]</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/EnumFilter">
-                EnumFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            replacement_cost
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">numeric</span>
-            
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            stock
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read</span>
-            
-              <span class="code">numeric</span>
-            
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
             stock_alert
         </dt>
         <dd>
@@ -715,23 +565,6 @@
             
               <span class="code">numeric</span>
             
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            stock_alert_percent
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/NumberFilter">
-                NumberFilter
-              </a>
-              <span class="code">Sortable</span>
             
             
           </div>
@@ -877,23 +710,6 @@
         </dd>
       
         <dt>
-            deleted
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/DeletedFilter">
-                DeletedFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
             updated_at
         </dt>
         <dd>
@@ -911,6 +727,20 @@
         <dd>
           <div>
             <span class="code">create, read, update</span>
+            
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            replacement_cost
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+              <span class="code">numeric</span>
             
             
             
@@ -960,6 +790,196 @@
           <div>
             <span class="code">read</span>
             
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            name
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/StringFilter">
+                StringFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            saleable
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/SaleableFilter">
+                SaleableFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            sku
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/StringFilter">
+                StringFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            internal_code
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/StringFilter">
+                StringFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            supplier_code
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/StringFilter">
+                StringFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            conduct
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+              <span class="code">in [variant_parent, variant_common, compound, common]</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/EnumFilter">
+                EnumFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            product_type
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+              <span class="code">in [service, product]</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/EnumFilter">
+                EnumFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            stock_type
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+              <span class="code">in [disabled, negative, positive]</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/EnumFilter">
+                EnumFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            stock_alert_percent
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/NumberFilter">
+                NumberFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            stock
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read</span>
+            
+              <span class="code">numeric</span>
+            
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            deleted
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/DeletedFilter">
+                DeletedFilter
+              </a>
+              <span class="code">Sortable</span>
             
             
           </div>
@@ -1224,7 +1244,7 @@
     
         <h4>Filter example</h4>
         <section>
-          http://api.multinexo.com/v1/companies/{company_id}/products?filter[name]=someValue
+          https://api.multinexo.comcompanies/{company_id}/products?filter[category_id]=someValue
         </section>
     
 
@@ -1239,20 +1259,9 @@
       type: products,
       id: 165,
       attributes: {
-        name: someValue,
-        saleable: someValue,
         description: someValue,
-        sku: someValue,
-        internal_code: someValue,
-        supplier_code: someValue,
-        conduct: someValue,
-        product_type: someValue,
         duration: someValue,
-        stock_type: someValue,
-        replacement_cost: someValue,
-        stock: someValue,
         stock_alert: someValue,
-        stock_alert_percent: someValue,
         stock_desired: someValue,
         cost_with_tax: someValue,
         photo_url: someValue,
@@ -1264,87 +1273,98 @@
         weight_element: someValue,
         units_per_package: someValue,
         units_per_box: someValue,
-        deleted: someValue,
         updated_at: someValue,
         allow_fractions: someValue,
+        replacement_cost: someValue,
         price: someValue,
         client_price_with_tax: someValue,
         subdist_price: someValue,
-        prevent_price: someValue
+        prevent_price: someValue,
+        name: someValue,
+        saleable: someValue,
+        sku: someValue,
+        internal_code: someValue,
+        supplier_code: someValue,
+        conduct: someValue,
+        product_type: someValue,
+        stock_type: someValue,
+        stock_alert_percent: someValue,
+        stock: someValue,
+        deleted: someValue
         },
       relationships: { 
          author:{
-          id: 402,
+          id: 976,
           type: author
         },
       
          category:{
-          id: 656,
+          id: 935,
           type: category
         },
       
          currency:{
-          id: 740,
+          id: 853,
           type: currency
         },
       
          compound_children:{
-          id: 726,
+          id: 208,
           type: compound_children
         },
       
          compound_parents:{
-          id: 392,
+          id: 439,
           type: compound_parents
         },
       
          futureprices:{
-          id: 478,
+          id: 671,
           type: futureprices
         },
       
          inventories:{
-          id: 347,
+          id: 322,
           type: inventories
         },
       
          measures:{
-          id: 984,
+          id: 765,
           type: measures
         },
       
          photos:{
-          id: 183,
+          id: 148,
           type: photos
         },
       
          pricelist_products:{
-          id: 125,
+          id: 919,
           type: pricelist_products
         },
       
          publications:{
-          id: 442,
+          id: 115,
           type: publications
         },
       
          suppliers:{
-          id: 385,
+          id: 823,
           type: suppliers
         },
       
          tax:{
-          id: 425,
+          id: 144,
           type: tax
         },
       
          variants_children:{
-          id: 431,
+          id: 435,
           type: variants_children
         },
       
          variant_parent:{
-          id: 694,
+          id: 991,
           type: variant_parent
         }
       }
@@ -1364,13 +1384,13 @@
     
 
     <span class=get >GET </span>
-    http://api.multinexo.com/v1/companies/{company_id}/products/&#123resource_id&#125
+    https://api.multinexo.comcompanies/{company_id}/products/&#123resource_id&#125
   </p>
   
   <p>
     
       <span class="post">POST</span>
-      http://api.multinexo.com/v1/companies/{company_id}/products/
+      https://api.multinexo.comcompanies/{company_id}/products/
     
   </p>
 </section>
@@ -1417,8 +1437,8 @@
         <footer class="footer">
     <div class="container">
         <p class="text-center">
-            Multinexo 2019 |
-            Powered by <a href="https://multinexo.com/">Multinexo</a>
+            Multinexo 2020 |
+            Powered by <a href="https://multinexo.com">Multinexo</a>
         </p>
         <!-- <p class="text-muted">Place sticky footer content here.</p> -->
     </div>

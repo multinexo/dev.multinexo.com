@@ -41,9 +41,9 @@
 <meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/permission_groups/" />
 <meta property="og:site_name" content="Multinexo Developers" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-22T17:47:54+00:00" />
+<meta property="article:published_time" content="2020-03-10T14:25:55+00:00" />
 <script type="application/ld+json">
-{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Permission Groups","dateModified":"2019-11-22T17:47:54+00:00","datePublished":"2019-11-22T17:47:54+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/permission_groups/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/permission_groups/"},"@context":"https://schema.org"}</script>
+{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Permission Groups","dateModified":"2020-03-10T14:25:55+00:00","datePublished":"2020-03-10T14:25:55+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/permission_groups/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/permission_groups/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -62,7 +62,9 @@
         <nav class="mdl-navigation mdl-layout--large-screen-only links">
           <a href="/">Home</a>
           <a href="/docs/0.0.23/resources/products/">API</a>
-          <a href="/styleguide/intro">Guía de estilo</a>
+          
+            <a href="/styleguide/intro">Guía de estilo</a>
+          
           <!--  descomentar cuando esté listo el blog -->
           <!--<a href="/2017/05/03/jekyll-doc-theme.html">Blog</a>-->
         </nav>
@@ -87,7 +89,9 @@
   <nav class="mdl-navigation">
     <a class="mdl-navigation__link" href="">Home</a>
     <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">API</a>
-    <a class="mdl-navigation__link" href="/styleguide/intro">Guía de estilo</a>
+    
+      <a class="mdl-navigation__link" href="/styleguide/intro">Guía de estilo</a>
+    
     <form class="mdl-navigation__link" id="search-form">
       <div class="mdl-textfield mdl-js-textfield">
         <input class="mdl-textfield__input search-box-mobile" type="text" Placeholder="Buscar...">
@@ -168,6 +172,13 @@
           
         </nav>
       
+        <span class="mdl-layout-title">AuthFactor</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/tokens/">Tokens</a>
+          
+        </nav>
+      
         <span class="mdl-layout-title">Cashier</span>
         <nav class="mdl-navigation">
           
@@ -182,6 +193,13 @@
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/physicalpos/">Physicalpos</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/transactions/">Transactions</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Common</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permissions/">Permissions</a>
           
         </nav>
       
@@ -289,9 +307,9 @@
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/measures/">Measures</a>
           
-            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/meli_categories/">Meli Categories</a>
-          
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/mercadolibre_attributes/">Mercadolibre Attributes</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/mercadolibre_categories/">Mercadolibre Categories</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/pricelist_categories/">Pricelist Categories</a>
           
@@ -306,6 +324,8 @@
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/product_supplier/">Product Supplier</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/publication_metas/">Publication Metas</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/publications/">Publications</a>
           
@@ -333,11 +353,11 @@
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/additional_accounts/">Additional Accounts</a>
           
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/auth_clients/">Auth Clients</a>
+          
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/company_users/">Company Users</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permission_groups/">Permission Groups</a>
-          
-            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permissions/">Permissions</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/preferences/">Preferences</a>
           
@@ -502,7 +522,7 @@
 
 
 
-  <section><span class=get >GET </span>http://api.multinexo.com/v1/permission_groups</section>
+  <section><span class=get >GET </span>https://api.multinexo.compermission_groups</section>
 
 
 
@@ -589,7 +609,7 @@
   {
     data: {
       type: permission_groups,
-      id: 154,
+      id: 584,
       attributes: {
         name: someValue,
         slug: someValue,
@@ -597,7 +617,7 @@
         },
       relationships: { 
          permissions:{
-          id: 418,
+          id: 668,
           type: permissions
         }
       }
@@ -617,13 +637,13 @@
     
 
     <span class=get >GET </span>
-    http://api.multinexo.com/v1/permission_groups/&#123resource_id&#125
+    https://api.multinexo.compermission_groups/&#123resource_id&#125
   </p>
   
   <p>
     
       <span class="post">POST</span>
-      http://api.multinexo.com/v1/permission_groups/
+      https://api.multinexo.compermission_groups/
     
   </p>
 </section>
@@ -647,8 +667,8 @@
         <footer class="footer">
     <div class="container">
         <p class="text-center">
-            Multinexo 2019 |
-            Powered by <a href="https://multinexo.com/">Multinexo</a>
+            Multinexo 2020 |
+            Powered by <a href="https://multinexo.com">Multinexo</a>
         </p>
         <!-- <p class="text-muted">Place sticky footer content here.</p> -->
     </div>

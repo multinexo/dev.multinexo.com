@@ -41,9 +41,9 @@
 <meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/entities/" />
 <meta property="og:site_name" content="Multinexo Developers" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-22T17:47:54+00:00" />
+<meta property="article:published_time" content="2020-03-10T14:25:55+00:00" />
 <script type="application/ld+json">
-{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Entities","dateModified":"2019-11-22T17:47:54+00:00","datePublished":"2019-11-22T17:47:54+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/entities/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/entities/"},"@context":"https://schema.org"}</script>
+{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Entities","dateModified":"2020-03-10T14:25:55+00:00","datePublished":"2020-03-10T14:25:55+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/entities/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/entities/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -62,7 +62,9 @@
         <nav class="mdl-navigation mdl-layout--large-screen-only links">
           <a href="/">Home</a>
           <a href="/docs/0.0.23/resources/products/">API</a>
-          <a href="/styleguide/intro">Guía de estilo</a>
+          
+            <a href="/styleguide/intro">Guía de estilo</a>
+          
           <!--  descomentar cuando esté listo el blog -->
           <!--<a href="/2017/05/03/jekyll-doc-theme.html">Blog</a>-->
         </nav>
@@ -87,7 +89,9 @@
   <nav class="mdl-navigation">
     <a class="mdl-navigation__link" href="">Home</a>
     <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">API</a>
-    <a class="mdl-navigation__link" href="/styleguide/intro">Guía de estilo</a>
+    
+      <a class="mdl-navigation__link" href="/styleguide/intro">Guía de estilo</a>
+    
     <form class="mdl-navigation__link" id="search-form">
       <div class="mdl-textfield mdl-js-textfield">
         <input class="mdl-textfield__input search-box-mobile" type="text" Placeholder="Buscar...">
@@ -168,6 +172,13 @@
           
         </nav>
       
+        <span class="mdl-layout-title">AuthFactor</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/tokens/">Tokens</a>
+          
+        </nav>
+      
         <span class="mdl-layout-title">Cashier</span>
         <nav class="mdl-navigation">
           
@@ -182,6 +193,13 @@
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/physicalpos/">Physicalpos</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/transactions/">Transactions</a>
+          
+        </nav>
+      
+        <span class="mdl-layout-title">Common</span>
+        <nav class="mdl-navigation">
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permissions/">Permissions</a>
           
         </nav>
       
@@ -289,9 +307,9 @@
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/measures/">Measures</a>
           
-            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/meli_categories/">Meli Categories</a>
-          
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/mercadolibre_attributes/">Mercadolibre Attributes</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/mercadolibre_categories/">Mercadolibre Categories</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/pricelist_categories/">Pricelist Categories</a>
           
@@ -306,6 +324,8 @@
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/product_supplier/">Product Supplier</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/products/">Products</a>
+          
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/publication_metas/">Publication Metas</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/publications/">Publications</a>
           
@@ -333,11 +353,11 @@
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/additional_accounts/">Additional Accounts</a>
           
+            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/auth_clients/">Auth Clients</a>
+          
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/company_users/">Company Users</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permission_groups/">Permission Groups</a>
-          
-            <a class="mdl-navigation__link" href="/docs/0.0.23/resources/permissions/">Permissions</a>
           
             <a class="mdl-navigation__link" href="/docs/0.0.23/resources/preferences/">Preferences</a>
           
@@ -502,32 +522,13 @@
 
 
 
-  <section><span class=get >GET </span>http://api.multinexo.com/v1/companies/{company_id}/entities</section>
+  <section><span class=get >GET </span>https://api.multinexo.comcompanies/{company_id}/entities</section>
 
 
 
 <h4>Attributes</h4>
 <section>
     <dl>
-      
-        <dt>
-            name
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">string</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/StringFilter">
-                StringFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
       
         <dt>
             contact_name
@@ -632,25 +633,6 @@
         </dd>
       
         <dt>
-            entity_type
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">in [client, supplier, employee, creditor, subdist, prevent]</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/EnumFilter">
-                EnumFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
             observations
         </dt>
         <dd>
@@ -687,23 +669,6 @@
         </dd>
       
         <dt>
-            identification_number
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/StringFilter">
-                StringFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
             latitude
         </dt>
         <dd>
@@ -734,6 +699,101 @@
           <div>
             <span class="code">create, read, update</span>
             
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            pdf_url
+        </dt>
+        <dd>
+          <div>
+            <span class="code">read</span>
+            
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            identification_id
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+              <span class="code">integer</span>
+            
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            responsibility_id
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+              <span class="code">integer</span>
+            
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            name
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+              <span class="code">string</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/StringFilter">
+                StringFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            entity_type
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+              <span class="code">in [client, supplier, employee, creditor, subdist, prevent]</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/EnumFilter">
+                EnumFilter
+              </a>
+              <span class="code">Sortable</span>
+            
+            
+          </div>
+        </dd>
+      
+        <dt>
+            identification_number
+        </dt>
+        <dd>
+          <div>
+            <span class="code">create, read, update</span>
+            
+            
+              <a class="code" href="/docs/0.0.23/StringFilter">
+                StringFilter
+              </a>
+              <span class="code">Sortable</span>
             
             
           </div>
@@ -785,46 +845,6 @@
                 NumberFilter
               </a>
               <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            pdf_url
-        </dt>
-        <dd>
-          <div>
-            <span class="code">read</span>
-            
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            identification_id
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">integer</span>
-            
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            responsibility_id
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-              <span class="code">integer</span>
-            
             
             
           </div>
@@ -999,6 +1019,22 @@
           </div>
         </dd>
     
+        <dt>
+            
+              recommended_products
+            
+        </dt>
+        <dd>
+          <div>
+            
+              <span class="code">has one</span>
+             of type:
+            <a href="/docs/resources/recommended_products/">
+              recommended_products
+            </a>
+          </div>
+        </dd>
+    
   </dl>
 </section>
 
@@ -1009,7 +1045,7 @@
     
         <h4>Filter example</h4>
         <section>
-          http://api.multinexo.com/v1/companies/{company_id}/entities?filter[name]=string
+          https://api.multinexo.comcompanies/{company_id}/entities?filter[name]=string
         </section>
     
 
@@ -1022,9 +1058,8 @@
   {
     data: {
       type: entities,
-      id: 993,
+      id: 565,
       attributes: {
-        name: string,
         contact_name: string,
         street_name: string,
         street_number: someValue,
@@ -1033,70 +1068,76 @@
         additional_info: someValue,
         email: someValue,
         phone: someValue,
-        entity_type: someValue,
         observations: someValue,
         balance: someValue,
         balance_at: someValue,
-        identification_number: someValue,
         latitude: someValue,
         longitude: someValue,
         has_account: someValue,
-        deleted: someValue,
-        pareto_class: someValue,
-        pareto_percent: someValue,
         pdf_url: someValue,
         identification_id: someValue,
-        responsibility_id: someValue
+        responsibility_id: someValue,
+        name: string,
+        entity_type: someValue,
+        identification_number: someValue,
+        deleted: someValue,
+        pareto_class: someValue,
+        pareto_percent: someValue
         },
       relationships: { 
          transactions:{
-          id: 627,
+          id: 193,
           type: transactions
         },
       
          documents:{
-          id: 351,
+          id: 660,
           type: documents
         },
       
          orders:{
-          id: 444,
+          id: 442,
           type: orders
         },
       
          invoices:{
-          id: 160,
+          id: 946,
           type: invoices
         },
       
          responsibility:{
-          id: 798,
+          id: 957,
           type: responsibility
         },
       
          pricelist:{
-          id: 838,
+          id: 875,
           type: pricelist
         },
       
          author:{
-          id: 166,
+          id: 619,
           type: author
         },
       
          identification:{
-          id: 507,
+          id: 285,
           type: identification
         },
       
          products:{
-          id: 474,
+          id: 468,
           type: products
         },
       
          seller:{
-          id: 880,
+          id: 583,
           type: seller
+        },
+      
+         recommended_products:{
+          id: 704,
+          type: recommended_products
         }
       }
     }
@@ -1115,13 +1156,13 @@
     
 
     <span class=get >GET </span>
-    http://api.multinexo.com/v1/companies/{company_id}/entities/&#123resource_id&#125
+    https://api.multinexo.comcompanies/{company_id}/entities/&#123resource_id&#125
   </p>
   
   <p>
     
       <span class="post">POST</span>
-      http://api.multinexo.com/v1/companies/{company_id}/entities/
+      https://api.multinexo.comcompanies/{company_id}/entities/
     
   </p>
 </section>
@@ -1145,8 +1186,8 @@
         <footer class="footer">
     <div class="container">
         <p class="text-center">
-            Multinexo 2019 |
-            Powered by <a href="https://multinexo.com/">Multinexo</a>
+            Multinexo 2020 |
+            Powered by <a href="https://multinexo.com">Multinexo</a>
         </p>
         <!-- <p class="text-muted">Place sticky footer content here.</p> -->
     </div>
