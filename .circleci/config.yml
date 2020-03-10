@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.5.1-node
     steps:
       - checkout
       - run:
@@ -15,7 +15,7 @@ jobs:
           command: bundle exec jekyll build
   deploy-to-ghpages:
     docker:
-      - image: circleci/ruby:2.5.1
+      - image: circleci/ruby:2.5.1-node
     steps:
       - checkout
       - run:
@@ -36,6 +36,7 @@ jobs:
             git commit -m "Deploying..."
             git push --set-upstream origin/temp-deploy-branch
             bundle exec jgd -r temp-deploy-branch
+            git checkout v2.0
             git push origin --delete temp-deploy-branch
 
 workflows:
