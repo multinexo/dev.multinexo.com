@@ -47,9 +47,11 @@ attributes:
   -
     name: balance
     crud: read
+    sortable: 'true'
   -
     name: balance_at
     crud: read
+    sortable: 'true'
   -
     name: latitude
     crud: 'create, read, update'
@@ -62,6 +64,7 @@ attributes:
   -
     name: pdf_url
     crud: read
+    sortable: 'true'
   -
     name: identification_id
     crud: 'create, read, update'
@@ -75,6 +78,7 @@ attributes:
     name: name
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     required: true
     value_type: string
     rules:
@@ -83,43 +87,48 @@ attributes:
     name: entity_type
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [client, supplier, employee, creditor, subdist, prevent]'
+    value_type: 'enum (client, supplier, employee, creditor, subdist, prevent)'
   -
     name: identification_number
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     rules:
       - 'max:15'
   -
     name: deleted
     crud: read
     filter: DeletedFilter
+    sortable: 'true'
   -
     name: pareto_class
     crud: read
     filter: EnumFilter
+    sortable: 'true'
   -
     name: pareto_percent
     crud: read
     filter: NumberFilter
+    sortable: 'true'
 relationships:
   -
     resource: transactions
     alias: transactions
-    crud: 'create, read, update'
+    crud: read
   -
     resource: documents
     alias: documents
-    crud: 'create, read, update'
+    crud: read
   -
     resource: orders
     alias: orders
-    crud: 'create, read, update'
+    crud: read
   -
     resource: invoices
     alias: invoices
-    crud: 'create, read, update'
+    crud: read
   -
     resource: responsibility
     alias: responsibility
@@ -139,7 +148,7 @@ relationships:
   -
     resource: products
     alias: products
-    crud: 'create, read, update'
+    crud: read
   -
     resource: seller
     alias: seller

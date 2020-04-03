@@ -36,11 +36,12 @@ attributes:
     name: deleted
     crud: 'create, read, update'
     filter: DeletedFilter
+    sortable: 'true'
 relationships:
   -
     resource: entities
     alias: entities
-    crud: 'create, read, update'
+    crud: read
   -
     resource: pricelist_products
     alias: pricelist_products

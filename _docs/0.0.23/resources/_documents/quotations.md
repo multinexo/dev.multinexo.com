@@ -29,34 +29,40 @@ attributes:
   -
     name: discount_amount
     crud: read
+    sortable: 'true'
     value_type: numeric
   -
     name: pdf_url
     crud: read
+    sortable: 'true'
   -
     name: letter
     crud: read
+    sortable: 'true'
   -
     name: receipt_type
     crud: 'create, read, update'
     required: true
-    value_type: 'in [quotation]'
+    value_type: 'enum (quotation)'
   -
     name: section
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [sales, purchases]'
+    value_type: 'enum (sales, purchases)'
   -
     name: status
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [confirmed, draft]'
+    value_type: 'enum (confirmed, draft)'
   -
     name: receipt_volume
     crud: 'create, read, update'
     filter: NumberFilter
+    sortable: 'true'
     rules:
       - nullable
       - 'digits_between:0,4'
@@ -65,6 +71,7 @@ attributes:
     name: receipt_number
     crud: 'create, read, update'
     filter: NumberFilter
+    sortable: 'true'
     rules:
       - nullable
       - 'digits_between:0,8'
@@ -73,6 +80,7 @@ attributes:
     name: emission_date
     crud: read
     filter: EmissionDateFilter
+    sortable: 'true'
 relationships:
   -
     resource: currency
@@ -85,15 +93,15 @@ relationships:
   -
     resource: seller
     alias: seller
-    crud: 'create, read, update'
+    crud: read
   -
     resource: orders
     alias: orders
-    crud: 'create, read, update'
+    crud: read
   -
     resource: invoices
     alias: invoices
-    crud: 'create, read, update'
+    crud: read
   -
     resource: details
     alias: details

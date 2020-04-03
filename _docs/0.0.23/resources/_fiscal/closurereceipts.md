@@ -99,6 +99,7 @@ attributes:
     name: emission_date
     crud: 'create, read, update'
     filter: EmissionDateFilter
+    sortable: 'true'
 relationships:
   -
     resource: document

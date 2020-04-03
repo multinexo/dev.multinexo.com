@@ -9,16 +9,20 @@ attributes:
   -
     name: url
     crud: read
+    sortable: 'true'
   -
     name: status
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
   -
     name: observation
     crud: read
+    sortable: 'true'
   -
     name: updated_at
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: external_app

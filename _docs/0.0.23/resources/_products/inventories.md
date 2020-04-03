@@ -9,21 +9,27 @@ attributes:
   -
     name: qty
     crud: 'create, read'
+    sortable: 'true'
   -
     name: current_stock_qty
     crud: 'create, read'
+    sortable: 'true'
   -
     name: unit_price
     crud: 'create, read'
+    sortable: 'true'
   -
     name: total_price
     crud: 'create, read'
+    sortable: 'true'
   -
     name: total
     crud: 'create, read'
+    sortable: 'true'
   -
     name: created_at
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: product

@@ -27,10 +27,12 @@ attributes:
   -
     name: photo_url
     crud: read
+    sortable: 'true'
   -
     name: category_id
     crud: ''
     filter: EnumFilter
+    sortable: 'true'
   -
     name: high
     crud: 'create, read, update'
@@ -59,27 +61,26 @@ attributes:
     name: allow_fractions
     crud: 'create, read, update'
   -
-    name: replacement_cost
-    crud: 'create, read, update'
-    value_type: numeric
-    rules:
-      - 'max:999999'
-  -
     name: price
     crud: read
+    sortable: 'true'
   -
     name: client_price_with_tax
     crud: read
+    sortable: 'true'
   -
     name: subdist_price
     crud: read
+    sortable: 'true'
   -
     name: prevent_price
     crud: read
+    sortable: 'true'
   -
     name: name
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     required: true
     rules:
       - 'max:96'
@@ -87,79 +88,95 @@ attributes:
     name: saleable
     crud: 'create, read, update'
     filter: SaleableFilter
+    sortable: 'true'
   -
     name: sku
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     rules:
       - 'max:96'
   -
     name: internal_code
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     rules:
       - 'max:96'
   -
     name: supplier_code
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     rules:
       - 'max:96'
   -
     name: conduct
     crud: 'create, read, update'
     filter: EnumFilter
-    value_type: 'in [variant_parent, variant_common, compound, common]'
+    sortable: 'true'
+    value_type: 'enum (variant_parent, variant_common, compound, common)'
     required: true
   -
     name: product_type
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     rules:
       - 'max:96'
-    value_type: 'in [service, product]'
+    value_type: 'enum (service, product)'
+  -
+    name: replacement_cost
+    crud: 'create, read, update'
+    value_type: numeric
+    rules:
+      - 'max:999999'
   -
     name: stock_type
     crud: 'create, read, update'
     filter: EnumFilter
-    value_type: 'in [disabled, negative, positive]'
+    sortable: 'true'
+    value_type: 'enum (disabled, negative, positive)'
   -
     name: stock_alert_percent
     crud: 'create, read, update'
     filter: NumberFilter
+    sortable: 'true'
   -
     name: stock
     crud: 'create, read'
+    sortable: 'true'
     value_type: numeric
   -
     name: deleted
     crud: 'create, read, update'
     filter: DeletedFilter
+    sortable: 'true'
 relationships:
   -
     resource: author
     alias: author
-    crud: read
+    crud: 'create, read, update'
   -
     resource: category
     alias: category
-    crud: read
+    crud: 'create, read, update'
   -
     resource: currency
     alias: currency
-    crud: read
+    crud: 'create, read, update'
   -
     resource: compound_children
     alias: compound_children
-    crud: read
+    crud: 'create, read, update'
   -
     resource: compound_parents
     alias: compound_parents
-    crud: read
+    crud: 'create, read, update'
   -
     resource: futureprices
     alias: futureprices
-    crud: read
+    crud: 'create, read, update'
   -
     resource: inventories
     alias: inventories
@@ -167,31 +184,31 @@ relationships:
   -
     resource: measures
     alias: measures
-    crud: read
+    crud: 'create, read, update'
   -
     resource: photos
     alias: photos
-    crud: read
+    crud: 'create, read, update'
   -
     resource: pricelist_products
     alias: pricelist_products
-    crud: read
+    crud: 'create, read, update'
   -
     resource: publications
     alias: publications
-    crud: read
+    crud: 'create, read, update'
   -
     resource: suppliers
     alias: suppliers
-    crud: read
+    crud: 'create, read, update'
   -
     resource: tax
     alias: tax
-    crud: read
+    crud: 'create, read, update'
   -
     resource: variants_children
     alias: variants_children
-    crud: read
+    crud: 'create, read, update'
   -
     resource: variant_parent
     alias: variant_parent

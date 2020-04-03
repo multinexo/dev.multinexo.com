@@ -49,32 +49,38 @@ attributes:
     name: emission_date
     crud: 'create, read, update'
     filter: EmissionDateFilter
+    sortable: 'true'
   -
     name: section
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [sales, purchases]'
+    value_type: 'enum (sales, purchases)'
   -
     name: receipt_type
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [invoice, credit, debit, order_sell, order_buy, no_fiscal, quotation, zeta]'
+    value_type: 'enum (invoice, credit, debit, order_sell, order_buy, no_fiscal, quotation, zeta)'
   -
     name: status
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [draft, failed, queued, confirmed]'
+    value_type: 'enum (draft, failed, queued, confirmed)'
   -
     name: letter
     crud: read
     filter: LetterFilter
+    sortable: 'true'
   -
     name: receipt_volume
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     rules:
       - nullable
       - 'digits_between:0,4'
@@ -83,6 +89,7 @@ attributes:
     name: receipt_number
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     rules:
       - nullable
       - 'digits_between:0,8'
@@ -91,6 +98,7 @@ attributes:
     name: has_costs
     crud: read
     filter: HasCostsFilter
+    sortable: 'true'
 relationships:
   -
     resource: details
@@ -127,7 +135,7 @@ relationships:
   -
     resource: costs
     alias: costs
-    crud: 'create, read, update'
+    crud: read
   -
     resource: seller
     alias: seller

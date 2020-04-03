@@ -10,6 +10,7 @@ attributes:
     name: name
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     required: true
     rules:
       - 'max:96'
@@ -17,11 +18,12 @@ attributes:
     name: deleted
     crud: 'create, read, update'
     filter: DeletedFilter
+    sortable: 'true'
 relationships:
   -
     resource: categories
     alias: categories
-    crud: 'create, read, update'
+    crud: read
   -
     resource: pricelist_categories
     alias: pricelist_categories

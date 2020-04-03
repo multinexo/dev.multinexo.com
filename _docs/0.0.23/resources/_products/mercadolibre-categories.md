@@ -25,7 +25,7 @@ relationships:
   -
     resource: children
     alias: children
-    crud: 'create, read, update'
+    crud: read
   -
     resource: parent
     alias: parent

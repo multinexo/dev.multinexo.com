@@ -24,6 +24,7 @@ attributes:
   -
     name: discount_amount
     crud: read
+    sortable: 'true'
     value_type: numeric
   -
     name: show_amounts
@@ -33,6 +34,7 @@ attributes:
   -
     name: pdf_url
     crud: read
+    sortable: 'true'
   -
     name: canceled
     crud: 'create, read, update'
@@ -42,29 +44,35 @@ attributes:
   -
     name: cae
     crud: read
+    sortable: 'true'
   -
     name: cae_expiration_date
     crud: read
+    sortable: 'true'
   -
     name: section
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [sales, purchases]'
+    value_type: 'enum (sales, purchases)'
   -
     name: receipt_type
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [invoice, credit, debit]'
+    value_type: 'enum (invoice, credit, debit)'
   -
     name: letter
     crud: 'create, read, update'
     filter: LetterFilter
+    sortable: 'true'
   -
     name: receipt_volume
     crud: 'create, read, update'
     filter: NumberFilter
+    sortable: 'true'
     rules:
       - nullable
       - 'digits_between:0,4'
@@ -73,6 +81,7 @@ attributes:
     name: receipt_number
     crud: 'create, read, update'
     filter: NumberFilter
+    sortable: 'true'
     rules:
       - nullable
       - 'digits_between:0,8'
@@ -81,45 +90,47 @@ attributes:
     name: status
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [draft, failed, queued, confirmed]'
+    value_type: 'enum (draft, failed, queued, confirmed)'
   -
     name: emission_date
     crud: 'create, read, update'
     filter: EmissionDateFilter
+    sortable: 'true'
 relationships:
   -
     resource: currency
     alias: currency
-    crud: read
+    crud: 'create, read, update'
   -
     resource: entity
     alias: entity
-    crud: read
+    crud: 'create, read, update'
   -
     resource: fiscalpos
     alias: fiscalpos
-    crud: read
+    crud: 'create, read, update'
   -
     resource: physicalpos
     alias: physicalpos
-    crud: read
+    crud: 'create, read, update'
   -
     resource: seller
     alias: seller
-    crud: read
+    crud: 'create, read, update'
   -
     resource: receipt
     alias: receipt
-    crud: read
+    crud: 'create, read, update'
   -
     resource: cashier_entries
     alias: cashier_entries
-    crud: read
+    crud: 'create, read, update'
   -
     resource: details
     alias: details
-    crud: read
+    crud: 'create, read, update'
   -
     resource: orders
     alias: orders

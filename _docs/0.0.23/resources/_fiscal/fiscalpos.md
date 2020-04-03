@@ -10,6 +10,7 @@ attributes:
     name: number
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     required: true
     rules:
       - 'max:4'
@@ -17,12 +18,14 @@ attributes:
     name: pos_type
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [manual_a, manual_b, manual_c, manual_e, fiscal_printer, electronic]'
+    value_type: 'enum (manual_a, manual_b, manual_c, manual_e, fiscal_printer, electronic)'
   -
     name: enabled
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
   -
     name: fiscaltoken
     crud: 'create, read, update'

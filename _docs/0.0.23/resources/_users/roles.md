@@ -10,6 +10,7 @@ attributes:
     name: deleted
     crud: read
     filter: DeletedFilter
+    sortable: 'true'
   -
     name: name
     crud: 'create, read, update'
@@ -20,6 +21,7 @@ attributes:
   -
     name: is_admin
     crud: read
+    sortable: 'true'
   -
     name: description
     crud: 'create, read, update'

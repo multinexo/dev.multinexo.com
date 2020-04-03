@@ -19,8 +19,9 @@ attributes:
   -
     name: status
     crud: read
+    sortable: 'true'
     required: true
-    value_type: 'in [activated, suspended, redeem]'
+    value_type: 'enum (activated, suspended, redeem)'
   -
     name: abbreviation
     crud: 'create, read, update'
@@ -66,6 +67,7 @@ attributes:
   -
     name: logo_url
     crud: read
+    sortable: 'true'
   -
     name: street_name
     crud: 'create, read, update'
@@ -83,35 +85,41 @@ attributes:
   -
     name: fiscal_ws_status
     crud: read
-    value_type: 'in [, waiting, ok]'
+    sortable: 'true'
+    value_type: 'enum (, waiting, ok)'
   -
     name: started_at
     crud: read
+    sortable: 'true'
   -
     name: expire_at
     crud: read
+    sortable: 'true'
   -
     name: remaining_documents
     crud: read
+    sortable: 'true'
   -
     name: csr_url
     crud: 'create, read, update'
   -
     name: deleted_at
     crud: read
+    sortable: 'true'
   -
     name: deleted
     crud: read
     filter: DeletedFilter
+    sortable: 'true'
 relationships:
   -
     resource: fiscalpos
     alias: fiscalpos
-    crud: 'create, read, update'
+    crud: read
   -
     resource: user
     alias: user
-    crud: 'create, read, update'
+    crud: read
   -
     resource: responsibility
     alias: responsibility
@@ -119,11 +127,11 @@ relationships:
   -
     resource: company_payments
     alias: company_payments
-    crud: 'create, read, update'
+    crud: read
   -
     resource: plan
     alias: plan
-    crud: 'create, read, update'
+    crud: read
   -
     resource: notifications
     alias: notifications

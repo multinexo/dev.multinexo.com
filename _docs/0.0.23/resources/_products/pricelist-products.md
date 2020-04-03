@@ -23,9 +23,11 @@ attributes:
   -
     name: client_price
     crud: read
+    sortable: 'true'
   -
     name: client_net_price
     crud: read
+    sortable: 'true'
   -
     name: subdist_value_number
     crud: 'create, read, update'
@@ -35,6 +37,7 @@ attributes:
   -
     name: subdist_price
     crud: read
+    sortable: 'true'
   -
     name: prevent_value_number
     crud: 'create, read, update'
@@ -44,6 +47,7 @@ attributes:
   -
     name: prevent_price
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: product

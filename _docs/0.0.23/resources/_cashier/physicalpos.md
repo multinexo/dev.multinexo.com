@@ -10,23 +10,28 @@ attributes:
     name: number
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     required: true
     value_type: integer
   -
     name: enabled
     crud: 'create, read, update'
-    filter: StringFilter
+    filter: BooleanFilter
+    sortable: 'true'
     value_type: boolean
   -
     name: alias
     crud: 'create, read, update'
     filter: LikeFilter
+    sortable: 'true'
   -
     name: mercadopago_qr_url
     crud: read
+    sortable: 'true'
   -
     name: mercadopago_qr_pdf
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: cashier_balances

@@ -24,7 +24,7 @@ attributes:
     name: status
     crud: 'create, read, update'
     required: true
-    value_type: 'in [uncredited, credited, in_observation]'
+    value_type: 'enum (uncredited, credited, in_observation)'
   -
     name: payment_code
     crud: 'create, read, update'
@@ -32,7 +32,7 @@ attributes:
     name: payment_type
     crud: 'create, read, update'
     required: true
-    value_type: 'in [emitted_documents, auto_renovation, manual_activation]'
+    value_type: 'enum (emitted_documents, auto_renovation, manual_activation)'
   -
     name: months
     crud: 'create, read, update'

@@ -17,16 +17,19 @@ attributes:
     name: to
     crud: 'create, read, update'
     filter: LikeFilter
+    sortable: 'true'
     required: true
   -
     name: status
     crud: 'create, read, update'
     filter: EnumFilter
-    value_type: 'in [sent, queued, draft, failed]'
+    sortable: 'true'
+    value_type: 'enum (sent, queued, draft, failed)'
   -
     name: resources
     crud: read
     filter: ResourceFilter
+    sortable: 'true'
 relationships:
   -
     resource: documents

@@ -22,6 +22,7 @@ attributes:
     name: date
     crud: 'create, read, update'
     filter: DateFilter
+    sortable: 'true'
 relationships: {  }
 
 ---

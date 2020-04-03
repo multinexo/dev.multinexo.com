@@ -10,17 +10,20 @@ attributes:
     name: name
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
     required: true
   -
     name: behavior
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [cash, cash_adjustment, stock_adjustment, current_account, check, card, other, difference, mercado_pago]'
+    value_type: 'enum (cash, cash_adjustment, stock_adjustment, current_account, check, card, other, difference, mercado_pago)'
   -
     name: enabled
     crud: 'create, read, update'
-    filter: StringFilter
+    filter: BooleanFilter
+    sortable: 'true'
     value_type: boolean
 relationships:
   -

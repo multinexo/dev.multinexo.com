@@ -13,6 +13,7 @@ attributes:
   -
     name: pdf_url
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: entities

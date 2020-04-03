@@ -9,17 +9,20 @@ attributes:
   -
     name: due_date
     crud: 'create, read'
+    sortable: 'true'
     rules:
       - nullable
       - iso_date
   -
     name: amount
     crud: 'create, read'
+    sortable: 'true'
     required: true
     value_type: numeric
   -
     name: current_balance
     crud: read
+    sortable: 'true'
     value_type: numeric
   -
     name: observations
@@ -27,9 +30,11 @@ attributes:
   -
     name: created_at
     crud: read
+    sortable: 'true'
   -
     name: pdf_url
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: documents

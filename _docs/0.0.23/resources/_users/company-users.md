@@ -9,13 +9,15 @@ attributes:
   -
     name: email
     crud: 'create, read'
+    sortable: 'true'
     rules:
       - email
   -
     name: invitation_status
     crud: read
+    sortable: 'true'
     required: true
-    value_type: 'in [pending, accepted, rejected]'
+    value_type: 'enum (pending, accepted, rejected)'
   -
     name: company_id
     crud: 'create, read, update'
@@ -23,23 +25,24 @@ attributes:
     name: deleted
     crud: 'create, read, update'
     filter: DeletedFilter
+    sortable: 'true'
 relationships:
   -
     resource: permissions
     alias: permissions
-    crud: ''
+    crud: read
   -
     resource: roles
     alias: roles
-    crud: ''
+    crud: 'create, read, update'
   -
     resource: user
     alias: user
-    crud: ''
+    crud: 'create, read, update'
   -
     resource: entity
     alias: entity
-    crud: ''
+    crud: 'create, read, update'
   -
     resource: user_register_schema
     alias: user_register_schema

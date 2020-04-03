@@ -10,7 +10,8 @@ attributes:
     name: resource
     crud: 'create, read, update'
     filter: EnumFilter
-    value_type: 'in [entities, products]'
+    sortable: 'true'
+    value_type: 'enum (entities, products)'
   -
     name: has_header
     crud: 'create, read, update'
@@ -22,9 +23,11 @@ attributes:
   -
     name: records
     crud: read
+    sortable: 'true'
   -
     name: status
     crud: read
+    sortable: 'true'
   -
     name: observation
     crud: 'create, read, update'

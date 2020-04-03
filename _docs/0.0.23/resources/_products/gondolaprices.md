@@ -9,12 +9,15 @@ attributes:
   -
     name: only_modified
     crud: 'create, read'
+    sortable: 'true'
   -
     name: date
     crud: read
+    sortable: 'true'
   -
     name: pdf_url
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: pricelist

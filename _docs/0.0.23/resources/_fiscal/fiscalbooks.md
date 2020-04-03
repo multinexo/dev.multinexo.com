@@ -21,30 +21,38 @@ attributes:
   -
     name: total
     crud: read
+    sortable: 'true'
   -
     name: net
     crud: read
+    sortable: 'true'
   -
     name: url_pdf
     crud: read
+    sortable: 'true'
   -
     name: url_xls
     crud: read
+    sortable: 'true'
   -
     name: url_csv
     crud: read
+    sortable: 'true'
   -
     name: url_citi
     crud: read
+    sortable: 'true'
   -
     name: fiscalbook_type
     crud: 'create, read, update'
     filter: EnumFilter
-    value_type: 'in [sells, buys]'
+    sortable: 'true'
+    value_type: 'enum (sells, buys)'
   -
     name: to
     crud: 'create, read, update'
     filter: DateFilter
+    sortable: 'true'
     rules:
       - iso_date
 relationships: {  }

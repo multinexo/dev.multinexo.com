@@ -9,12 +9,15 @@ attributes:
   -
     name: name
     crud: read
+    sortable: 'true'
   -
     name: code_afip
     crud: read
+    sortable: 'true'
   -
     name: percent_value
     crud: read
+    sortable: 'true'
 relationships: {  }
 
 ---

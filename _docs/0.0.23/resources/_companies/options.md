@@ -16,6 +16,7 @@ attributes:
   -
     name: class
     crud: 'create, read, update'
+    sortable: 'true'
 relationships: {  }
 
 ---

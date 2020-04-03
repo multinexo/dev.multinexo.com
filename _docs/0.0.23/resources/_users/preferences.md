@@ -9,6 +9,7 @@ attributes:
   -
     name: key
     crud: read
+    sortable: 'true'
   -
     name: value
     crud: 'create, read, update'

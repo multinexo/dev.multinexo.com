@@ -36,15 +36,15 @@ attributes:
   -
     name: listing_type_id
     crud: 'create, read, update'
-    value_type: 'in [gold_pro, gold_premium, gold_special, gold, silver, bronze, free]'
+    value_type: 'enum (gold_pro, gold_premium, gold_special, gold, silver, bronze, free)'
   -
     name: item_condition
     crud: 'create, read, update'
-    value_type: 'in [new, used, reconditioned]'
+    value_type: 'enum (new, used, reconditioned)'
   -
     name: warranty_type
     crud: 'create, read, update'
-    value_type: 'in [factory, seller]'
+    value_type: 'enum (factory, seller)'
   -
     name: warranty_time
     crud: 'create, read, update'

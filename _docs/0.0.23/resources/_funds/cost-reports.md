@@ -7,31 +7,10 @@ section: Funds
 partOf: company
 attributes:
   -
-    name: percent
-    crud: 'create, read, update'
-    sortable: 'true'
-    required: true
-  -
-    name: name
-    crud: 'create, read, update'
-    filter: LikeFilter
-    sortable: 'true'
-    required: true
-  -
-    name: description
-    crud: 'create, read, update'
-  -
-    name: deleted
-    crud: 'create, read, update'
-    filter: DeletedFilter
-  -
-    name: parent_id
-    crud: read
-    filter: StringFilter
-  -
     name: from
     crud: 'create, read, update'
     filter: DateFilter
+    sortable: 'true'
     rules:
       - iso_date
     required: true
@@ -39,16 +18,19 @@ attributes:
     name: to
     crud: 'create, read, update'
     filter: DateFilter
+    sortable: 'true'
     rules:
       - iso_date
     required: true
   -
     name: total
     crud: read
+    sortable: 'true'
     value_type: numeric
   -
     name: pdf_url
     crud: read
+    sortable: 'true'
 relationships: {  }
 
 ---

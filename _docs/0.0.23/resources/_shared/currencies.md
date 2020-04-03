@@ -14,10 +14,12 @@ attributes:
     name: code_iso
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
   -
     name: code_afip
     crud: 'create, read, update'
     filter: StringFilter
+    sortable: 'true'
   -
     name: symbol
     crud: 'create, read, update'

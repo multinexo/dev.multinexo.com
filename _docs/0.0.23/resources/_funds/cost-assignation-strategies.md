@@ -7,14 +7,10 @@ section: Funds
 partOf: company
 attributes:
   -
-    name: percent
-    crud: 'create, read, update'
-    sortable: 'true'
-    required: true
-  -
     name: name
     crud: 'create, read, update'
     filter: LikeFilter
+    sortable: 'true'
     required: true
   -
     name: description

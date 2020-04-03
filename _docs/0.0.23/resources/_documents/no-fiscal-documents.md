@@ -30,7 +30,7 @@ attributes:
     name: status
     crud: 'create, read, update'
     required: true
-    value_type: 'in [draft, failed, queued, confirmed]'
+    value_type: 'enum (draft, failed, queued, confirmed)'
 relationships:
   -
     resource: currency

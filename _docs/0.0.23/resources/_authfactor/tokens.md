@@ -15,6 +15,7 @@ attributes:
   -
     name: expires_at
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: auth_client

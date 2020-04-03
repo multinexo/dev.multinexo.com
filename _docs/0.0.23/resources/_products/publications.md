@@ -15,15 +15,19 @@ attributes:
   -
     name: item_url
     crud: read
+    sortable: 'true'
   -
     name: item_last_update
     crud: read
+    sortable: 'true'
   -
     name: item_status
     crud: read
+    sortable: 'true'
   -
     name: observations
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: product

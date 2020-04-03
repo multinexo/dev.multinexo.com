@@ -12,7 +12,7 @@ attributes:
     filter: StringFilter
     sortable: 'true'
     required: true
-    value_type: 'in [error, warning, info, success]'
+    value_type: 'enum (error, warning, info, success)'
   -
     name: message
     crud: 'create, read, update'
@@ -20,12 +20,15 @@ attributes:
   -
     name: href
     crud: read
+    sortable: 'true'
   -
     name: read
     crud: 'read, update'
+    sortable: 'true'
   -
     name: viewed
     crud: 'read, update'
+    sortable: 'true'
   -
     name: created_at
     crud: read

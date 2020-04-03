@@ -9,9 +9,11 @@ attributes:
   -
     name: parent_product_id
     crud: 'create, read'
+    sortable: 'true'
   -
     name: product_id
     crud: 'create, read'
+    sortable: 'true'
   -
     name: qty
     crud: 'create, read, update'

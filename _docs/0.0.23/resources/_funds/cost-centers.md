@@ -7,11 +7,6 @@ section: Funds
 partOf: company
 attributes:
   -
-    name: percent
-    crud: 'create, read, update'
-    sortable: 'true'
-    required: true
-  -
     name: name
     crud: 'create, read, update'
     filter: LikeFilter
@@ -24,19 +19,21 @@ attributes:
     name: deleted
     crud: 'create, read, update'
     filter: DeletedFilter
+    sortable: 'true'
   -
     name: parent_id
     crud: read
     filter: StringFilter
+    sortable: 'true'
 relationships:
   -
     resource: cost_assignation_strategy
     alias: cost_assignation_strategy
-    crud: 'create, read, update'
+    crud: 'create, read'
   -
     resource: costs
     alias: costs
-    crud: 'create, read, update'
+    crud: read
   -
     resource: cost_center_parent
     alias: cost_center_parent

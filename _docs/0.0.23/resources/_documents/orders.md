@@ -29,35 +29,42 @@ attributes:
   -
     name: discount_amount
     crud: read
+    sortable: 'true'
     value_type: numeric
   -
     name: pdf_url
     crud: read
+    sortable: 'true'
   -
     name: letter
     crud: read
+    sortable: 'true'
   -
     name: status
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [confirmed, draft]'
+    value_type: 'enum (confirmed, draft)'
   -
     name: section
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [sales, purchases]'
+    value_type: 'enum (sales, purchases)'
   -
     name: receipt_type
     crud: 'create, read, update'
     filter: EnumFilter
+    sortable: 'true'
     required: true
-    value_type: 'in [order_sell, order_buy]'
+    value_type: 'enum (order_sell, order_buy)'
   -
     name: receipt_volume
     crud: 'create, read, update'
     filter: NumberFilter
+    sortable: 'true'
     rules:
       - nullable
       - 'digits_between:0,4'
@@ -66,6 +73,7 @@ attributes:
     name: receipt_number
     crud: 'create, read, update'
     filter: NumberFilter
+    sortable: 'true'
     rules:
       - nullable
       - 'digits_between:0,8'
@@ -74,10 +82,12 @@ attributes:
     name: emission_date
     crud: 'create, read, update'
     filter: EmissionDateFilter
+    sortable: 'true'
   -
     name: has_costs
     crud: read
     filter: HasCostsFilter
+    sortable: 'true'
 relationships:
   -
     resource: currency
@@ -98,15 +108,15 @@ relationships:
   -
     resource: invoices
     alias: invoices
-    crud: 'create, read, update'
+    crud: read
   -
     resource: quotations
     alias: quotations
-    crud: 'create, read, update'
+    crud: read
   -
     resource: orders
     alias: orders
-    crud: 'create, read, update'
+    crud: read
   -
     resource: cashier_entries
     alias: cashier_entries
@@ -114,7 +124,7 @@ relationships:
   -
     resource: costs
     alias: costs
-    crud: 'create, read, update'
+    crud: 'create, update'
   -
     resource: seller
     alias: seller

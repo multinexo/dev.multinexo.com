@@ -15,10 +15,11 @@ attributes:
     name: fortype
     crud: 'create, read, update'
     required: true
-    value_type: 'in [cost, promotion, auto]'
+    value_type: 'enum (cost, promotion, auto)'
   -
     name: date_from
     crud: 'create, read, update'
+    sortable: 'true'
     rules:
       - iso_date
     required: true
@@ -34,6 +35,7 @@ attributes:
   -
     name: activated
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: product

@@ -17,10 +17,15 @@ attributes:
   -
     name: revoked
     crud: read
+    sortable: 'true'
+  -
+    name: secret
+    crud: read
+    sortable: 'true'
 relationships:
   -
-    resource: author
-    alias: author
+    resource: user
+    alias: user
     crud: 'create, read, update'
 
 ---

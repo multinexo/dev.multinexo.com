@@ -30,9 +30,11 @@ attributes:
   -
     name: created_at
     crud: read
+    sortable: 'true'
   -
     name: updated_at
     crud: read
+    sortable: 'true'
 relationships:
   -
     resource: category
