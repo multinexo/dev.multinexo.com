@@ -41,9 +41,9 @@
 <meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/messages/" />
 <meta property="og:site_name" content="Multinexo Developers" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-03-10T14:25:55+00:00" />
+<meta property="article:published_time" content="2020-04-03T15:56:32+00:00" />
 <script type="application/ld+json">
-{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Messages","dateModified":"2020-03-10T14:25:55+00:00","datePublished":"2020-03-10T14:25:55+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/messages/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/messages/"},"@context":"https://schema.org"}</script>
+{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Messages","dateModified":"2020-04-03T15:56:32+00:00","datePublished":"2020-04-03T15:56:32+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/messages/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/messages/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -578,7 +578,7 @@
           <div>
             <span class="code">create, read, update</span>
             
-              <span class="code">in [sent, queued, draft, failed]</span>
+              <span class="code">enum (sent, queued, draft, failed)</span>
             
             
               <a class="code" href="/docs/0.0.23/EnumFilter">
@@ -703,7 +703,7 @@
   {
     data: {
       type: messages,
-      id: 848,
+      id: 668,
       attributes: {
         subject: someValue,
         content: someValue,
@@ -713,22 +713,22 @@
         },
       relationships: { 
          documents:{
-          id: 837,
+          id: 109,
           type: documents
         },
       
          fiscalbooks:{
-          id: 671,
+          id: 485,
           type: fiscalbooks
         },
       
          pricelist_reports:{
-          id: 666,
+          id: 922,
           type: pricelist_reports
         },
       
          cost_reports:{
-          id: 625,
+          id: 579,
           type: cost_reports
         }
       }

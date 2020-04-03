@@ -41,9 +41,9 @@
 <meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/orders/" />
 <meta property="og:site_name" content="Multinexo Developers" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-03-10T14:25:55+00:00" />
+<meta property="article:published_time" content="2020-04-03T15:56:32+00:00" />
 <script type="application/ld+json">
-{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Orders","dateModified":"2020-03-10T14:25:55+00:00","datePublished":"2020-03-10T14:25:55+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/orders/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/orders/"},"@context":"https://schema.org"}</script>
+{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Orders","dateModified":"2020-04-03T15:56:32+00:00","datePublished":"2020-04-03T15:56:32+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/orders/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/orders/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -643,7 +643,7 @@
           <div>
             <span class="code">create, read, update</span>
             
-              <span class="code">in [confirmed, draft]</span>
+              <span class="code">enum (confirmed, draft)</span>
             
             
               <a class="code" href="/docs/0.0.23/EnumFilter">
@@ -662,7 +662,7 @@
           <div>
             <span class="code">create, read, update</span>
             
-              <span class="code">in [sales, purchases]</span>
+              <span class="code">enum (sales, purchases)</span>
             
             
               <a class="code" href="/docs/0.0.23/EnumFilter">
@@ -681,7 +681,7 @@
           <div>
             <span class="code">create, read, update</span>
             
-              <span class="code">in [order_sell, order_buy]</span>
+              <span class="code">enum (order_sell, order_buy)</span>
             
             
               <a class="code" href="/docs/0.0.23/EnumFilter">
@@ -957,7 +957,7 @@
   {
     data: {
       type: orders,
-      id: 551,
+      id: 447,
       attributes: {
         net: someValue,
         total: someValue,
@@ -977,52 +977,52 @@
         },
       relationships: { 
          currency:{
-          id: 349,
+          id: 177,
           type: currency
         },
       
          entity:{
-          id: 599,
+          id: 131,
           type: entity
         },
       
          physicalpos:{
-          id: 231,
+          id: 569,
           type: physicalpos
         },
       
          details:{
-          id: 646,
+          id: 219,
           type: details
         },
       
          invoices:{
-          id: 333,
+          id: 373,
           type: invoices
         },
       
          quotations:{
-          id: 798,
+          id: 458,
           type: quotations
         },
       
          orders:{
-          id: 818,
+          id: 279,
           type: orders
         },
       
          cashier_entries:{
-          id: 948,
+          id: 258,
           type: cashier_entries
         },
       
          costs:{
-          id: 747,
+          id: 269,
           type: costs
         },
       
          seller:{
-          id: 261,
+          id: 623,
           type: seller
         }
       }
