@@ -3,7 +3,7 @@ resource: company_users
 permalink: /docs/0.0.23/resources/company_users/
 version: 0.0.23
 singular: resource
-section: Users
+section: Companies
 partOf: company
 attributes:
   -
