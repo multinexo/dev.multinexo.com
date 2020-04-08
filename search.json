@@ -134,6 +134,12 @@
   
     
     {
+      "title": "Company Users",
+      "url": "/docs/0.0.23/resources/company_users/"
+    },
+  
+    
+    {
       "title": "Discounts",
       "url": "/docs/0.0.23/resources/discounts/"
     },
@@ -430,12 +436,6 @@
     {
       "title": "Auth Clients",
       "url": "/docs/0.0.23/resources/auth_clients/"
-    },
-  
-    
-    {
-      "title": "Company Users",
-      "url": "/docs/0.0.23/resources/company_users/"
     },
   
     
