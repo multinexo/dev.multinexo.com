@@ -24,6 +24,7 @@ attributes:
   -
     name: cost_with_tax
     crud: 'create, read, update'
+    sortable: 'true'
   -
     name: photo_url
     crud: read
@@ -128,6 +129,7 @@ attributes:
   -
     name: replacement_cost
     crud: 'create, read, update'
+    sortable: 'true'
     value_type: numeric
     rules:
       - 'max:999999'
