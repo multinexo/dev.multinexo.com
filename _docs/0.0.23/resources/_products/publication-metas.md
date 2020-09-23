@@ -9,9 +9,11 @@ attributes:
   -
     name: key
     crud: 'create, read, update'
+    required: true
   -
     name: value
     crud: 'create, read, update'
+    required: true
 relationships: {  }
 
 ---

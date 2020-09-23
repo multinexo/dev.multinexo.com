@@ -9,24 +9,34 @@ attributes:
   -
     name: qty
     crud: 'create, read, update'
+    required: true
+    value_type: numeric
+    rules:
+      - 'min:0.0001'
   -
     name: product_name
     crud: 'create, read, update'
   -
     name: cost
     crud: 'create, read, update'
+    required: true
+    value_type: numeric
   -
     name: net
     crud: 'create, read, update'
+    value_type: numeric
   -
     name: price
     crud: 'create, read, update'
+    value_type: numeric
   -
     name: commission
     crud: 'create, read, update'
+    value_type: numeric
   -
     name: document_id
     crud: 'create, read, update'
+    value_type: numeric
 relationships:
   -
     resource: product

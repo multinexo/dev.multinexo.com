@@ -22,6 +22,11 @@ attributes:
     required: true
     value_type: 'enum (manual_a, manual_b, manual_c, manual_e, fiscal_printer, electronic)'
   -
+    name: status
+    crud: 'create, read, update'
+    filter: EnumFilter
+    sortable: 'true'
+  -
     name: enabled
     crud: 'create, read, update'
     filter: EnumFilter
