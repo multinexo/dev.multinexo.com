@@ -28,14 +28,6 @@ attributes:
     sortable: 'true'
 relationships:
   -
-    resource: permissions
-    alias: permissions
-    crud: read
-  -
-    resource: roles
-    alias: roles
-    crud: 'create, read, update'
-  -
     resource: user
     alias: user
     crud: 'create, read, update'
@@ -47,5 +39,9 @@ relationships:
     resource: user_register_schema
     alias: user_register_schema
     crud: ''
+  -
+    resource: roles
+    alias: roles
+    crud: 'create, read, update'
 
 ---
