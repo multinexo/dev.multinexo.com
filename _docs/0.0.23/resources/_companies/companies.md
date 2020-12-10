@@ -21,7 +21,7 @@ attributes:
     crud: read
     sortable: 'true'
     required: true
-    value_type: 'enum (activated, suspended, redeem)'
+    value_type: 'enum (activated, suspended, redeem, building)'
   -
     name: abbreviation
     crud: 'create, read, update'
