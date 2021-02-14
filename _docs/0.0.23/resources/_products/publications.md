@@ -22,7 +22,7 @@ attributes:
     sortable: 'true'
   -
     name: item_status
-    crud: 'create, read'
+    crud: read
     sortable: 'true'
   -
     name: observations
