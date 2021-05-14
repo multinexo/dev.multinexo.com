@@ -43,6 +43,14 @@ attributes:
     crud: read
     sortable: 'true'
   -
+    name: url_digital_cbte
+    crud: read
+    sortable: 'true'
+  -
+    name: url_alicuotas
+    crud: read
+    sortable: 'true'
+  -
     name: fiscalbook_type
     crud: 'create, read, update'
     filter: EnumFilter
