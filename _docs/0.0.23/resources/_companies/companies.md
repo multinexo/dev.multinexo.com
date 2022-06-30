@@ -42,6 +42,7 @@ attributes:
   -
     name: activities_start_date
     crud: 'create, read, update'
+    sortable: 'true'
     rules:
       - iso_date
   -
