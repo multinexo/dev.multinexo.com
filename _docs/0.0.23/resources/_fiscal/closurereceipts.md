@@ -29,6 +29,12 @@ attributes:
     required: true
     value_type: numeric
   -
+    name: sales_first_a
+    crud: 'create, read, update'
+  -
+    name: sales_first_bc
+    crud: 'create, read, update'
+  -
     name: sales_last_a
     crud: 'create, read, update'
     required: true
@@ -50,6 +56,12 @@ attributes:
     crud: 'create, read, update'
     required: true
     value_type: numeric
+  -
+    name: credit_first_a
+    crud: 'create, read, update'
+  -
+    name: credit_first_bc
+    crud: 'create, read, update'
   -
     name: credit_last_a
     crud: 'create, read, update'
