@@ -18,6 +18,14 @@ attributes:
     crud: 'create, read, update'
     required: true
   -
+    name: image
+    crud: read
+    sortable: 'true'
+  -
+    name: icon
+    crud: read
+    sortable: 'true'
+  -
     name: href
     crud: read
     sortable: 'true'
