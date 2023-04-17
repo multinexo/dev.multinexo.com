@@ -218,6 +218,12 @@
   
     
     {
+      "title": "Entity Types",
+      "url": "/docs/0.0.23/resources/entity_types/"
+    },
+  
+    
+    {
       "title": "Identifications",
       "url": "/docs/0.0.23/resources/identifications/"
     },

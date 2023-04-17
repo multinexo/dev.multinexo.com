@@ -16,7 +16,7 @@
       gtag('config', 'UA-29898815-5');
     </script>
 
-    <title>Categories</title>
+    <title>Entity Types</title>
     <meta name="description" content="">
 
 
@@ -31,23 +31,23 @@
 
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Categories | Multinexo Developers</title>
+<title>Entity Types | Multinexo Developers</title>
 <meta name="generator" content="Jekyll v3.6.2" />
-<meta property="og:title" content="Categories" />
+<meta property="og:title" content="Entity Types" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!" />
 <meta property="og:description" content="Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!" />
-<link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/resources/categories/" />
-<meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/categories/" />
+<link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/resources/entity_types/" />
+<meta property="og:url" content="https://dev.multinexo.com/docs/0.0.23/resources/entity_types/" />
 <meta property="og:site_name" content="Multinexo Developers" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-04-17T14:50:35+00:00" />
 <script type="application/ld+json">
-{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Categories","dateModified":"2023-04-17T14:50:35+00:00","datePublished":"2023-04-17T14:50:35+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/categories/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/categories/"},"@context":"https://schema.org"}</script>
+{"description":"Documentación de la API de Multinexo. Sistema online de gestión para pequeñas y medianas empresas. Impresora fiscal, factura electrónica, stock, cuentas corrientes, multiusuario, ¡y más!","@type":"BlogPosting","headline":"Entity Types","dateModified":"2023-04-17T14:50:35+00:00","datePublished":"2023-04-17T14:50:35+00:00","url":"https://dev.multinexo.com/docs/0.0.23/resources/entity_types/","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.multinexo.com/docs/0.0.23/resources/entity_types/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/resources/categories/">
+    <link rel="canonical" href="https://dev.multinexo.com/docs/0.0.23/resources/entity_types/">
     <link rel="alternate" type="application/rss+xml" title="Multinexo Developers" href="https://dev.multinexo.com/feed.xml" />
 </head>
 
@@ -519,12 +519,12 @@
           <div class="layout-row layout-align-center-start mdl-color--grey-50 flex width-100">
               <div class="flex-50 flex-rs-big-70 flex-sm-100 flex-rs-md-100 flex-md-100" style="margin: 20px 0; padding: 0 20px">
                 
-                  <h1>categories resource</h1>
+                  <h1>entity_types resource</h1>
                   
 
 
 
-  <section><span class=get >GET </span>https://api.multinexo.comcompanies/{company_id}/categories</section>
+  <section><span class=get >GET </span>https://api.multinexo.comentity_types</section>
 
 
 
@@ -539,28 +539,8 @@
           <div>
             <span class="code">create, read, update</span>
             
+              <span class="code">string</span>
             
-              <a class="code" href="/docs/0.0.23/StringFilter">
-                StringFilter
-              </a>
-              <span class="code">Sortable</span>
-            
-            
-          </div>
-        </dd>
-      
-        <dt>
-            deleted
-        </dt>
-        <dd>
-          <div>
-            <span class="code">create, read, update</span>
-            
-            
-              <a class="code" href="/docs/0.0.23/DeletedFilter">
-                DeletedFilter
-              </a>
-              <span class="code">Sortable</span>
             
             
           </div>
@@ -575,54 +555,6 @@
 <section>
   <dl>
     
-        <dt>
-            
-              categories
-            
-        </dt>
-        <dd>
-          <div>
-            
-              <span class="code">has one</span>
-             of type:
-            <a href="/docs/resources/categories/">
-              categories
-            </a>
-          </div>
-        </dd>
-    
-        <dt>
-            
-              pricelist_categories
-            
-        </dt>
-        <dd>
-          <div>
-            
-              <span class="code">has one</span>
-             of type:
-            <a href="/docs/resources/pricelist_categories/">
-              pricelist_categories
-            </a>
-          </div>
-        </dd>
-    
-        <dt>
-            
-              parentcategory
-            
-        </dt>
-        <dd>
-          <div>
-            
-              <span class="code">has one</span>
-             of type:
-            <a href="/docs/resources/parentcategory/">
-              parentcategory
-            </a>
-          </div>
-        </dd>
-    
   </dl>
 </section>
 
@@ -630,11 +562,6 @@
 
     
     
-    
-        <h4>Filter example</h4>
-        <section>
-          https://api.multinexo.comcompanies/{company_id}/categories?filter[name]=someValue
-        </section>
     
 
 
@@ -645,28 +572,12 @@
 <pre>
   {
     data: {
-      type: categories,
-      id: 490,
+      type: entity_types,
+      id: 804,
       attributes: {
-        name: someValue,
-        deleted: someValue
+        name: string
         },
-      relationships: { 
-         categories:{
-          id: 716,
-          type: categories
-        },
-      
-         pricelist_categories:{
-          id: 682,
-          type: pricelist_categories
-        },
-      
-         parentcategory:{
-          id: 680,
-          type: parentcategory
-        }
-      }
+      relationships: { }
     }
   }
 </pre>
@@ -683,13 +594,13 @@
     
 
     <span class=get >GET </span>
-    https://api.multinexo.comcompanies/{company_id}/categories/&#123resource_id&#125
+    https://api.multinexo.comentity_types/&#123resource_id&#125
   </p>
   
   <p>
     
       <span class="post">POST</span>
-      https://api.multinexo.comcompanies/{company_id}/categories/
+      https://api.multinexo.comentity_types/
     
   </p>
 </section>
@@ -700,7 +611,7 @@
 </div>
                 <!-- <p class="text-center">
                   <br />
-                  <a target="_blank" href="https://github.com/multinexo/dev.multinexo.com//_docs/0.0.23/resources/_products/categories.md" class="btn btn-default githubEditButton" role="button">
+                  <a target="_blank" href="https://github.com/multinexo/dev.multinexo.com//_docs/0.0.23/resources/_entities/entity-types.md" class="btn btn-default githubEditButton" role="button">
                     <i class="fa fa-pencil fa-lg"></i> Mejorar esta documetnació
                   </a>
                 </p> -->
