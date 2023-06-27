@@ -46,6 +46,10 @@ attributes:
     required: true
     value_type: boolean
   -
+    name: perception
+    crud: read
+    sortable: 'true'
+  -
     name: emission_date
     crud: 'create, read, update'
     filter: EmissionDateFilter
