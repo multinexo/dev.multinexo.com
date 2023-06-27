@@ -78,6 +78,9 @@ attributes:
     crud: read
     sortable: 'true'
   -
+    name: has_perception
+    crud: 'create, read, update'
+  -
     name: name
     crud: 'create, read, update'
     filter: StringFilter
