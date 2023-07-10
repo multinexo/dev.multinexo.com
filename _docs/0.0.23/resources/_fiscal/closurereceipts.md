@@ -29,6 +29,10 @@ attributes:
     required: true
     value_type: numeric
   -
+    name: sales_another_tributes
+    crud: 'create, read, update'
+    value_type: numeric
+  -
     name: sales_first_a
     crud: 'create, read, update'
   -
@@ -55,6 +59,10 @@ attributes:
     name: credit_tax
     crud: 'create, read, update'
     required: true
+    value_type: numeric
+  -
+    name: credit_another_tributes
+    crud: 'create, read, update'
     value_type: numeric
   -
     name: credit_first_a

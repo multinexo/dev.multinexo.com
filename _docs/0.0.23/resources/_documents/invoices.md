@@ -7,6 +7,10 @@ section: Documents
 partOf: company
 attributes:
   -
+    name: perception
+    crud: read
+    sortable: 'true'
+  -
     name: net
     crud: 'create, read, update'
     value_type: numeric
