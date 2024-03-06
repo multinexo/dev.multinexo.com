@@ -51,6 +51,14 @@ attributes:
     crud: read
     sortable: 'true'
   -
+    name: url_sicore
+    crud: read
+    sortable: 'true'
+  -
+    name: url_sujetos_retenidos
+    crud: read
+    sortable: 'true'
+  -
     name: fiscalbook_type
     crud: 'create, read, update'
     filter: EnumFilter
